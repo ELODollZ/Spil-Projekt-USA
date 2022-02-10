@@ -13,6 +13,7 @@ namespace Misc
 
         public Timer (float time)
         {
+            TimerLengh = time;
             TimeLeft = time;
         }
 
@@ -27,7 +28,16 @@ namespace Misc
                 TimeLeft = 0;
                 timerDone?.Invoke();
             }
+        }
 
+        public void Restart()
+        {
+            TimeLeft = TimerLengh;
+        }
+        public void Restart(float newTime)
+        {
+            TimeLeft = newTime;
+            TimerLengh = newTime;
         }
     }
 }
