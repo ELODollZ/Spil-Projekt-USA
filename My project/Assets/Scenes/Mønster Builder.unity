@@ -5990,7 +5990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2727267505842331810, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2727267505842331810, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
