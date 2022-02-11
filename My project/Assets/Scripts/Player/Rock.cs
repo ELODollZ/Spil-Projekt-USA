@@ -1,28 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Made By Editor: Daniel M�nster Nybo (shooting/throwing scripts)
+//Made By Editor: Daniel M�nster Nybo (Rock scripts)
 public class Rock : MonoBehaviour
 {
-    public int speed = 50;
-    public Vector3 targetVector;
-    public float lifetime = 10f;
+    //lave variable for hhv. levetiden af rock for at den ikke overloader ens computer, hastigheden af rock, og rigidbody
+    private float lifetime = 10000f;
+    public float speedAfKastingRock = 10f;
+    private Rigidbody2D rb2d;
 
     [SerializeField]
     ParticleSystem particleSystem;
 
     void Start()
     {
-        Rigidbody2D rb = gameObject.GetComponentInChildren<Rigidbody2D>();
-        rb.AddForce(targetVector.normalized * speed);
+        //kalder i starten rigidbody fra unity og giver den velocity, og retter den mod højre og ganger noget speed på.
+        rb2d = GetComponent<Rigidbody2D>();
+        rb2d.velocity = transform.right * speedAfKastingRock;
     }
 
     void Update()
     {
+
+
         lifetime -= Time.deltaTime;
         if (lifetime <= 0f)
         {
-           particleSystem.Play();
+            Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        particleSystem.Play();
+    }
+
 }
