@@ -33,6 +33,7 @@ public class WallPing : MonoBehaviour, IHitObj
     public void Ping()
     {
         toShow.AddRange(hitpoints);
+        hitpoints.Clear();
         pinged = true;
     }
 
@@ -47,12 +48,12 @@ public class WallPing : MonoBehaviour, IHitObj
                 pingedTimed.PoolInstantiate(toShow[i], new Vector3());
             }
             pinged = false;
+            toShow.Clear();
         }
     }
 
     public void EndOfRay()
     {
-        Debug.Log("End Of Ray");
         hitpoints.Clear();
     }
 }

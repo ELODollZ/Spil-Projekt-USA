@@ -160,7 +160,7 @@ MonoBehaviour:
   hitLayerFirstRay:
     serializedVersion: 2
     m_Bits: 192
-  soundDis: 20
+  soundDis: 10
 --- !u!4 &90491022
 Transform:
   m_ObjectHideFlags: 0
@@ -423,6 +423,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90491022}
     m_Modifications:
+    - target: {fileID: 2727267504909398356, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2727267504909398357, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
       propertyPath: playOnAwake
       value: 0
