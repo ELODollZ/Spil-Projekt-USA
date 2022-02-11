@@ -25,23 +25,25 @@ public class MonsterChase : MonoBehaviour
 
     [SerializeField] ParticleSystem m_ParticleSystem;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
         disToNextStep = disBetweenStep;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // sets the range between the monster and the player
         range = Vector2.Distance(transform.position, Player.position);
 
+        // makes the monster chase the player if its within range
         if (range < maxDis)
         {
 
             transform.position = Vector2.MoveTowards(transform.position, Player.position, Speed * Time.deltaTime);
         }
 
+        // plays the sound waves every few steps
         disToNextStep -= Vector2.Distance(lastPos, (Vector2)transform.position);
         lastPos = transform.position;
 
