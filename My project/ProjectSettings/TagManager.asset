@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Ground
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - Player
   - Walls
   - Enemy
-  - 
+  - Ground
   - 
   - 
   - 
@@ -47,4 +49,7 @@ TagManager:
     locked: 0
   - name: PartIcal
     uniqueID: 590834955
+    locked: 0
+  - name: Ground
+    uniqueID: 2436912353
     locked: 0
