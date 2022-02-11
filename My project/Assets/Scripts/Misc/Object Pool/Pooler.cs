@@ -36,7 +36,9 @@ public class Pooler : MonoBehaviour
             GameObject[] objects = new GameObject[poolObject[i].amt];
             for (int j = 0; j < objects.Length; j++)
             {
-                objects[j] = Instantiate(poolObject[i].poolObject);
+                GameObject obj = Instantiate(poolObject[i].poolObject);
+                obj.SetActive(false);
+                objects[j] = obj;
             }
             pools[i].SetPool(objects);
         }
@@ -78,6 +80,9 @@ public class Pooler : MonoBehaviour
         public int poolID;
         public string poolName;
     }
+
+
+
 }
 
 

@@ -58,7 +58,7 @@ public class SimpleMovement : MonoBehaviour
         if (disToNextStep <= 0)
         {
             disToNextStep = disBetweenStep;
-            m_ParticleSystem.Play();
+            //m_ParticleSystem.Play();
         }
 
     }
