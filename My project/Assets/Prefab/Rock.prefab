@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8475576635088183561}
   - component: {fileID: 5371983396927901940}
-  - component: {fileID: -5378662832601104945}
   - component: {fileID: -3210785623452713909}
-  - component: {fileID: 6438384726100618048}
+  - component: {fileID: -6335827444865107151}
+  - component: {fileID: -6842957403967194122}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -86,22 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5378662832601104945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2919863526109226667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0d4edc53ea37d4b88054c04ebaf0d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 50
-  targetVector: {x: 1, y: 1, z: 0}
-  lifetime: 20
-  particleSystem: {fileID: 1076811865038155792}
 --- !u!50 &-3210785623452713909
 Rigidbody2D:
   serializedVersion: 4
@@ -121,10 +105,10 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &6438384726100618048
-BoxCollider2D:
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!58 &-6335827444865107151
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -137,18 +121,22 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
+--- !u!114 &-6842957403967194122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2919863526109226667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0d4edc53ea37d4b88054c04ebaf0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedAfKastingRock: 10
+  particleSystem: {fileID: 1076811865038155792}
 --- !u!1001 &3109922422845132978
 PrefabInstance:
   m_ObjectHideFlags: 0
