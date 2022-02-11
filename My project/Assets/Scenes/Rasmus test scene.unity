@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 98041337}
   - component: {fileID: 98041336}
   - component: {fileID: 98041335}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -585,7 +585,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765124793}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -694,9 +694,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd9bff48ab97224ba9c47ce49cd477b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 2.5
   particleSystem: {fileID: 951496848}
-  disBetweenStep: 1
+  disBetweenStep: 1.3
 --- !u!1 &815816547
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 815816550}
   - component: {fileID: 815816548}
   - component: {fileID: 815816549}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TIleMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,7 +779,7 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
 --- !u!1839735485 &815816550
 Tilemap:
   m_ObjectHideFlags: 0
@@ -2136,7 +2136,7 @@ GameObject:
   - component: {fileID: 1293524724}
   - component: {fileID: 1293524723}
   m_Layer: 0
-  m_Name: Tester (1)
+  m_Name: Wather Drop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2154,8 +2154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39da3e3df3673a546a67a3384dc09bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeMin: 0.6
-  timeMax: 1
+  timeMin: 1.3
+  timeMax: 1.7
   particleSystem: {fileID: 427765311}
 --- !u!4 &1293524724
 Transform:
@@ -2165,12 +2165,42 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293524722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.45, y: -2.58, z: 0}
+  m_LocalPosition: {x: 8.58, y: -2.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 427765312}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1422330242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1422330243}
+  m_Layer: 0
+  m_Name: PoolObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1422330243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422330242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.779692, y: 2.2552493, z: -2.002799}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2727267506609112760
 PrefabInstance:
@@ -2194,14 +2224,6 @@ PrefabInstance:
     - target: {fileID: 2727267505842331810, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
       propertyPath: playOnAwake
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727267505842331810, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727267505842331810, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
-      propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2727267505842331811, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
       propertyPath: m_RootOrder

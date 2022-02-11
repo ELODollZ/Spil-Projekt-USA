@@ -11,7 +11,7 @@ public class TestPartikalOnTimer : MonoBehaviour
     float time = 5;
 
     [SerializeField]
-    ParticleSystem particleSystem;
+    ParticleSystem m_ParticleSystem;
 
     Timer timer;
 
@@ -19,7 +19,7 @@ public class TestPartikalOnTimer : MonoBehaviour
     void Start()
     {
         timer = new Timer(time);
-        timer.timerDone += particleSystem.Play;
+        timer.timerDone += m_ParticleSystem.Play;
     }
 
     private void Update()

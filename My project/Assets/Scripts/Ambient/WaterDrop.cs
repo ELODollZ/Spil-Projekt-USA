@@ -12,7 +12,7 @@ public class WaterDrop : MonoBehaviour
     float timeMin = 0.6f, timeMax = 1;
 
     [SerializeField]
-    ParticleSystem particleSystem;
+    ParticleSystem m_ParticleSystem;
 
     Timer timer;
 
@@ -30,7 +30,7 @@ public class WaterDrop : MonoBehaviour
 
     private void TimerEnd()
     {
-        particleSystem.Play();
+        m_ParticleSystem.Play();
         timer.Restart(Random.Range(timeMin, timeMax));
     }
 }

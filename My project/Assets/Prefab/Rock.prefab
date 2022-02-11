@@ -101,7 +101,7 @@ MonoBehaviour:
   speed: 50
   targetVector: {x: 1, y: 1, z: 0}
   lifetime: 20
-  particleSystem: {fileID: 0}
+  particleSystem: {fileID: 1076811865038155792}
 --- !u!50 &-3210785623452713909
 Rigidbody2D:
   serializedVersion: 4
@@ -156,9 +156,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8475576635088183561}
     m_Modifications:
+    - target: {fileID: 2727267504909398357, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.35596296
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727267504909398357, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.9339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727267504909398357, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.7005498
+      objectReference: {fileID: 0}
     - target: {fileID: 2727267505842331808, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
       propertyPath: m_Name
       value: Sound Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727267505842331810, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.35596296
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727267505842331810, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.9339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727267505842331810, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.7005498
       objectReference: {fileID: 0}
     - target: {fileID: 2727267505842331811, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
       propertyPath: m_RootOrder
@@ -209,5 +233,10 @@ PrefabInstance:
 --- !u!4 &1076811865038155793 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2727267505842331811, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
+  m_PrefabInstance: {fileID: 3109922422845132978}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1076811865038155792 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2727267505842331810, guid: 20b86b38540c38443a806ccd08f92187, type: 3}
   m_PrefabInstance: {fileID: 3109922422845132978}
   m_PrefabAsset: {fileID: 0}

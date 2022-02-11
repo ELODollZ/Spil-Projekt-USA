@@ -10,7 +10,7 @@ public class SimpleMovement : MonoBehaviour
     float speed;
 
     [SerializeField]
-    ParticleSystem particleSystem;
+    ParticleSystem m_ParticleSystem;
 
     Rigidbody2D rb2d;
 
@@ -58,7 +58,7 @@ public class SimpleMovement : MonoBehaviour
         if (disToNextStep <= 0)
         {
             disToNextStep = disBetweenStep;
-            particleSystem.Play();
+            m_ParticleSystem.Play();
         }
 
     }
