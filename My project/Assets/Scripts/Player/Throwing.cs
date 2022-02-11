@@ -4,6 +4,7 @@ using UnityEngine;
 //Made By Editor: Daniel M�nster Nybo (shooting/throwing scripts)
 public class Throwing : MonoBehaviour
 {
+    //variable og prefab
     public Transform KasteStartingsPladsForRock;
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
