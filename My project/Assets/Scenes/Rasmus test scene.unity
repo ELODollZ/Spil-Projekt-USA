@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
-  particleSystem: {fileID: 951496848}
+  m_ParticleSystem: {fileID: 951496848}
   disBetweenStep: 1.3
 --- !u!1 &815816547
 GameObject:
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 5
-  particleSystem: {fileID: 695724602}
+  m_ParticleSystem: {fileID: 695724602}
 --- !u!4 &861442298
 Transform:
   m_ObjectHideFlags: 0
@@ -2156,7 +2156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeMin: 1.3
   timeMax: 1.7
-  particleSystem: {fileID: 427765311}
+  m_ParticleSystem: {fileID: 427765311}
 --- !u!4 &1293524724
 Transform:
   m_ObjectHideFlags: 0
