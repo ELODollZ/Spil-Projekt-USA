@@ -14,7 +14,7 @@ public class Throwing : MonoBehaviour
     void Update()
     {
         //laver en funktion der trigger hver gang man trykker på "throwingRockButton1"
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             //kalder en anden funktion shoot.
             Shoot();
@@ -28,10 +28,6 @@ public class Throwing : MonoBehaviour
         Instantiate(rockPrefab, KasteStartingsPladsForRock.position, KasteStartingsPladsForRock.rotation);
 
     }
-
-
-
-
     /*
     void FixedUpdate()
     {
@@ -40,9 +36,8 @@ public class Throwing : MonoBehaviour
             GameObject go = Instantiate(rockPrefab, gameObject.transform);
             Rock rock = go.GetComponent<Rock>();
             rock.targetVector = new Vector3(1, 1, 0);
-            
         }
-
     }
     */
+
 }

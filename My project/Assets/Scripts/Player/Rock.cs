@@ -8,7 +8,7 @@ public class Rock : MonoBehaviour
     private float lifetime = 10000f;
     public float speedAfKastingRock = 10f;
     private Rigidbody2D rb2d;
-
+    //gør så man kan sætte et particel system på i unity
     [SerializeField]
     ParticleSystem particleSystem;
 
@@ -21,8 +21,7 @@ public class Rock : MonoBehaviour
 
     void Update()
     {
-
-
+        //laver en livestid på gameobjects den skyder og ødelægger dem efter tiden er gået.
         lifetime -= Time.deltaTime;
         if (lifetime <= 0f)
         {
@@ -30,6 +29,7 @@ public class Rock : MonoBehaviour
         }
     }
 
+    //laver en funktioner der invoker particlesystem når den rammer noget.
     private void OnCollisionEnter2D(Collision2D collision)
     {
         particleSystem.Play();
