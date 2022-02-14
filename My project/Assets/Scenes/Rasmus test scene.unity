@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d166289b1831e8244bdd5dea7bc8087e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dampening: 1
+  dampening: 3
   optimizeDis: 0.25
 --- !u!1 &815816547
 GameObject:
