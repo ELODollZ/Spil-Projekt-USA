@@ -52,7 +52,7 @@ namespace SoundWaveSystem
                 //finder den ramte ting
                 IHitObj justHit = rayHit.collider.gameObject.GetComponent<IHitObj>();
 
-                //vis der ikke var noget at rame
+                //vis det der blev ramt ikke var et hit obj
                 if (justHit == null) return;
 
                 hits[hitCount] = justHit;
@@ -69,7 +69,7 @@ namespace SoundWaveSystem
                 reflectAngle = To360Deg(reflectAngle);
 
                 //skyder en ny ray
-                SubRay(rayHit.point, new Vector2(Mathf.Cos(reflectAngle * Mathf.Deg2Rad), Mathf.Sin(reflectAngle * Mathf.Deg2Rad)), disLeft-rayHit.distance, reflectAngle, hits, hitCount+1, rayHit.normal);
+                SubRay(rayHit.point, new Vector2(Mathf.Cos(reflectAngle * Mathf.Deg2Rad), Mathf.Sin(reflectAngle * Mathf.Deg2Rad)), disLeft-rayHit.distance- justHit.Dampening, reflectAngle, hits, hitCount+1, rayHit.normal);
             }
 
             for (int i = 0; i < hits.Length; i++)
