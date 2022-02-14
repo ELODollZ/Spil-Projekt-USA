@@ -74,6 +74,7 @@ namespace SoundWaveSystem
 
             for (int i = 0; i < hits.Length; i++)
             {
+                if (hits[i] == null) return;
                 hits[i].EndOfRay();
             }
         }
