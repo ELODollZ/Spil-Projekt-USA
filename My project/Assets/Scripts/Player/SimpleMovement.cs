@@ -9,21 +9,10 @@ public class SimpleMovement : MonoBehaviour
     [SerializeField]
     float speed;
 
-    [SerializeField]
-    ParticleSystem m_ParticleSystem;
-
     Rigidbody2D rb2d;
-
-    [SerializeField]
-    float disBetweenStep;
-
-    float disToNextStep;
-
-    Vector2 lastPos;
 
     void Start()
     {
-        disToNextStep = disBetweenStep;
         rb2d = GetComponent<Rigidbody2D>();
     }
 
@@ -50,16 +39,7 @@ public class SimpleMovement : MonoBehaviour
             move.x += speed;
         }
 
-        disToNextStep -= Vector2.Distance(lastPos, (Vector2)transform.position);
-        lastPos = transform.position;
-
         rb2d.velocity = move;
-
-        if (disToNextStep <= 0)
-        {
-            disToNextStep = disBetweenStep;
-            //m_ParticleSystem.Play();
-        }
 
     }
 }

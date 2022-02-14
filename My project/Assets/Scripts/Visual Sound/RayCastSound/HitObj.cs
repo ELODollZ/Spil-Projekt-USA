@@ -11,7 +11,7 @@ namespace SoundWaveSystem
     {
         void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft);
         void Ping();
-        GameObject getOriginObj();
+        //GameObject getOriginObj();
         float Dampening { get; }
         void EndOfRay();
     }

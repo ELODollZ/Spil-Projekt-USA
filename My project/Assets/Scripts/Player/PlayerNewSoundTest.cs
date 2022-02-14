@@ -2,57 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SoundWaveSystem;
-
+using UnityEngine.Events;
 
 //af Rasmus
+// skriptet stå for at lave lyd fra spilleren
 
-
-public class PlayerNewSoundTest : MonoBehaviour, ISoundOrigin, IHitObj
+public class PlayerNewSoundTest : MonoBehaviour, ISoundOrigin
 {
-    [SerializeField]
-    float soundDampening = 0;
-
-    public float Dampening { get { return soundDampening; } }
-
     public event MakeSound makeSound;
 
     [SerializeField]
-    SpriteRenderer spriteRenderer;
+    UnityEvent pingEvent;
 
-    [SerializeField]
-    Color pingColor = Color.red;
-
-    private void Update()
+    public void MakeSound()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            makeSound?.Invoke();
-        }
+        makeSound?.Invoke();
     }
-
 
     public GameObject getOriginObj()
     {
         return gameObject;
     }
 
-    public void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft)
-    {
-        origin.Ping();
-        for (int i = 0; i < hits.Length; i++)
-        {
-            if (hits[i] == null) return;
-            hits[i].Ping();
-        }
-    }
-
     public void Ping()
     {
-        spriteRenderer.color = pingColor;
-    }
-
-    public void EndOfRay()
-    {
-        
+        pingEvent?.Invoke();
     }
 }
