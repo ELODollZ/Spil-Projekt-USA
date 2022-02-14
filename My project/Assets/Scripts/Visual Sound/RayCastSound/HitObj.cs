@@ -9,7 +9,7 @@ namespace SoundWaveSystem
     //en interface for ting der kan blive ramt af lyd
     public interface IHitObj
     {
-        void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft);
+        void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft, AudioClip audio);
         void Ping();
         //GameObject getOriginObj();
         float Dampening { get; }
@@ -23,5 +23,5 @@ namespace SoundWaveSystem
         void Ping();
     }
 
-    public delegate void MakeSound();
+    public delegate void MakeSound(float soundDis, AudioClip sound);
 }

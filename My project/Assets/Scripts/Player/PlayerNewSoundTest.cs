@@ -11,12 +11,20 @@ public class PlayerNewSoundTest : MonoBehaviour, ISoundOrigin
 {
     public event MakeSound makeSound;
 
+    [Header("Sound Stuff")]
+    [SerializeField]
+    float soundDis = 20;
+    [SerializeField]
+    AudioClip audioClip;
+
+    [Header("Event")]
     [SerializeField]
     UnityEvent pingEvent;
 
+
     public void MakeSound()
     {
-        makeSound?.Invoke();
+        makeSound?.Invoke(soundDis, audioClip);
     }
 
     public void Ping()

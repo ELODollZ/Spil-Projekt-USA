@@ -15,6 +15,12 @@ public class SoundAfterRandomTime : MonoBehaviour, ISoundOrigin
     [SerializeField]
     UnityEvent originPinged;
 
+    [Header("Sound Stuff")]
+    [SerializeField]
+    float soundDis = 20;
+    [SerializeField]
+    AudioClip audioClip;
+
     Timer timer;
     bool pinged;
 
@@ -46,7 +52,7 @@ public class SoundAfterRandomTime : MonoBehaviour, ISoundOrigin
 
     private void TimerEnd()
     {
-        makeSound?.Invoke();
+        makeSound?.Invoke(soundDis, audioClip);
         timer.Restart(Random.Range(timeMin, timeMax));
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SoundWaveSystem;
+using Misc.Events;
 
 //af rasmus
 // skriptet stå for at pinge alle de ting en ray ramte før den kom til spilleren
@@ -13,16 +14,13 @@ public class PlayerSoundHit : MonoBehaviour, IHitObj
 
     public float Dampening { get { return soundDampening; } }
 
-    public event MakeSound makeSound;
+    [SerializeField]
+    AudioEvent audioEvent;
 
-
-    public void MakeSound()
+    //når spilleren bliver ramt beder den alt andet der var ramt af den samme ray at blive pinget, der bliver også affyret en event med lyd så spille lyd kan gøre ting
+    public void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft, AudioClip audioClip)
     {
-        makeSound?.Invoke();
-    }
-
-    public void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft)
-    {
+        audioEvent?.Invoke(audioClip, disLeft);
         origin.Ping();
         for (int i = 0; i < hits.Length; i++)
         {
