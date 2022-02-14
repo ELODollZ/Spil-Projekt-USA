@@ -14,7 +14,7 @@ public class PingedTimedDisapering : MonoBehaviour, IPoolerble
     Timer timer;
 
     [SerializeField]
-    Light2D light;
+    Light2D m_light;
 
     public event SimpleCall disabledEvent;
 
@@ -39,7 +39,7 @@ public class PingedTimedDisapering : MonoBehaviour, IPoolerble
     private void Update()
     {
         timer.Tick(Time.deltaTime);
-        light.intensity = timer.TimeLeft/timer.TimerLengh;
+        m_light.intensity = timer.TimeLeft/timer.TimerLengh;
     }
 
     private void TimerDone()

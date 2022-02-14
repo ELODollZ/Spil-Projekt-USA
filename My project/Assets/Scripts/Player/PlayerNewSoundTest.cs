@@ -19,11 +19,6 @@ public class PlayerNewSoundTest : MonoBehaviour, ISoundOrigin
         makeSound?.Invoke();
     }
 
-    public GameObject getOriginObj()
-    {
-        return gameObject;
-    }
-
     public void Ping()
     {
         pingEvent?.Invoke();

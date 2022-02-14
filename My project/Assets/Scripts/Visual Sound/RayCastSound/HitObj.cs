@@ -21,7 +21,6 @@ namespace SoundWaveSystem
     {
         event MakeSound makeSound;
         void Ping();
-        GameObject getOriginObj();
     }
 
     public delegate void MakeSound();

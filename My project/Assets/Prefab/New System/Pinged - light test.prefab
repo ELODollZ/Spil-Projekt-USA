@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pingTime: 8
-  light: {fileID: 5319193177158073325}
+  m_light: {fileID: 5319193177158073325}
 --- !u!114 &5319193177158073325
 MonoBehaviour:
   m_ObjectHideFlags: 0
