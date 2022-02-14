@@ -14,10 +14,9 @@ namespace SoundWaveSystem
         [SerializeField]
         LayerMask hitLayer, hitLayerFirstRay;
 
-        [SerializeField]
-        float soundDis;
-
         ISoundOrigin soundOrigin;
+
+        AudioClip audioClip;
 
         private void Awake()
         {
@@ -27,14 +26,16 @@ namespace SoundWaveSystem
 
 
         //skyder rays ud for at simulere lyd reflektion
-        public void ShootRay()
+        public void ShootRay(float dis, AudioClip audio)
         {
+            audioClip = audio;
+
             float angelPerStep = 360f / soundDetail;
 
             for (int i = 0; i < soundDetail; i++)
             {
                 IHitObj[] hits = new IHitObj[10];
-                SubRay(transform.position, new Vector2(Mathf.Cos(angelPerStep * i * Mathf.Deg2Rad), Mathf.Sin(angelPerStep * i * Mathf.Deg2Rad)), soundDis, angelPerStep * i, hits, 0, Vector2.zero);
+                SubRay(transform.position, new Vector2(Mathf.Cos(angelPerStep * i * Mathf.Deg2Rad), Mathf.Sin(angelPerStep * i * Mathf.Deg2Rad)), dis, angelPerStep * i, hits, 0, Vector2.zero);
             }
         }
 
@@ -57,7 +58,7 @@ namespace SoundWaveSystem
 
                 hits[hitCount] = justHit;
                 //siger til det ramte obj at det var ramt
-                justHit.Hit(soundOrigin, hits, rayHit.point, soundDis - rayHit.distance);
+                justHit.Hit(soundOrigin, hits, rayHit.point, disLeft - rayHit.distance, audioClip);
 
                 //colider vinkel
                 float colAngle = To360Deg(Mathf.Atan2(rayHit.normal.y, rayHit.normal.x) * Mathf.Rad2Deg);
