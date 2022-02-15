@@ -386,7 +386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 16450735}
   m_Layer: 0
-  m_Name: Room 301
+  m_Name: Room 201
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1701,7 +1701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 288458370}
   m_Layer: 0
-  m_Name: Room 306
+  m_Name: Room 206
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4816,7 +4816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 829532109}
   m_Layer: 0
-  m_Name: Room 302
+  m_Name: Room 202
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6207,7 +6207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1012686638}
   m_Layer: 0
-  m_Name: Room 303
+  m_Name: Room 203
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8019,7 +8019,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1405907534}
   m_Layer: 0
-  m_Name: Room 308
+  m_Name: Room 208
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10007,7 +10007,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1705527095}
   m_Layer: 0
-  m_Name: Room 307
+  m_Name: Room 207
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
