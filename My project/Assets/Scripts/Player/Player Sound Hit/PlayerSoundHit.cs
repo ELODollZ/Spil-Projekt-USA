@@ -14,14 +14,10 @@ public class PlayerSoundHit : MonoBehaviour, IHitObj
 
     public float Dampening { get { return soundDampening; } }
 
-    [SerializeField]
-    AudioEvent audioEvent;
-
     //når spilleren bliver ramt beder den alt andet der var ramt af den samme ray at blive pinget, der bliver også affyret en event med lyd så spille lyd kan gøre ting
-    public void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft, AudioClip audioClip)
+    public void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft, float maxDis)
     {
-        audioEvent?.Invoke(audioClip, disLeft);
-        origin.Ping();
+        origin.Ping(disLeft / maxDis);
         for (int i = 0; i < hits.Length; i++)
         {
             if (hits[i] == null) return;

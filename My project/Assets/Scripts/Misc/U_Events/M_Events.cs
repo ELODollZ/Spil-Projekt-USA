@@ -8,6 +8,6 @@ using UnityEngine.Events;
 namespace Misc.Events
 {
     [System.Serializable]
-    public class AudioEvent : UnityEvent<AudioClip, float>{ }
-
+    public class FloatEvent : UnityEvent<float>{}
+    
 }

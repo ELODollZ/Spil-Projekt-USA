@@ -20,7 +20,7 @@ public class WallPing : MonoBehaviour, IHitObj
 
     List<PingedTimedDisapering> activePoolItems = new List<PingedTimedDisapering>(1300);
 
-    public void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft, AudioClip audioClip)
+    public void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft, float maxDis)
     {
         hitpoints.Add(hitPoint);
     }

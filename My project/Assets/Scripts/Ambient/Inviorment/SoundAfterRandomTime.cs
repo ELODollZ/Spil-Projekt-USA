@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SoundWaveSystem;
 using Misc;
-using UnityEngine.Events;
+using Misc.Events;
 
 //af Rasmus
 
@@ -13,23 +13,26 @@ public class SoundAfterRandomTime : MonoBehaviour, ISoundOrigin
     float timeMin = 2.6f, timeMax = 4;
 
     [SerializeField]
-    UnityEvent originPinged;
+    FloatEvent originPinged;
 
     [Header("Sound Stuff")]
     [SerializeField]
     float soundDis = 20;
-    [SerializeField]
-    AudioClip audioClip;
+
 
     Timer timer;
     bool pinged;
-
+    float higestPing = 0;
     public event MakeSound makeSound;
 
 
-    public void Ping()
+    public void Ping(float power)
     {
         pinged = true;
+        if (higestPing < power)
+        {
+            higestPing = power;
+        }
     }
 
     void Start()
@@ -44,7 +47,8 @@ public class SoundAfterRandomTime : MonoBehaviour, ISoundOrigin
 
         if (pinged)
         {
-            originPinged?.Invoke();
+            originPinged?.Invoke(higestPing);
+            higestPing = 0;
             pinged = false;
         }
     }
@@ -52,7 +56,7 @@ public class SoundAfterRandomTime : MonoBehaviour, ISoundOrigin
 
     private void TimerEnd()
     {
-        makeSound?.Invoke(soundDis, audioClip);
+        makeSound?.Invoke(soundDis);
         timer.Restart(Random.Range(timeMin, timeMax));
     }
 }

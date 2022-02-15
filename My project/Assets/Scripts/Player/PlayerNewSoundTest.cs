@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SoundWaveSystem;
 using UnityEngine.Events;
+using Misc.Events;
 
 //af Rasmus
 // skriptet stå for at lave lyd fra spilleren
@@ -14,21 +15,38 @@ public class PlayerNewSoundTest : MonoBehaviour, ISoundOrigin
     [Header("Sound Stuff")]
     [SerializeField]
     float soundDis = 20;
-    [SerializeField]
-    AudioClip audioClip;
 
     [Header("Event")]
     [SerializeField]
-    UnityEvent pingEvent;
+    FloatEvent pingEvent;
+
+
+    bool pinged = false;
+    float higestPing = 0;
 
 
     public void MakeSound()
     {
-        makeSound?.Invoke(soundDis, audioClip);
+        makeSound?.Invoke(soundDis);
+        Ping(1);
     }
 
-    public void Ping()
+    public void Ping(float power)
     {
-        pingEvent?.Invoke();
+        pinged = true;
+        if (higestPing < power)
+        {
+            higestPing = power;
+        }
+    }
+
+    private void Update()
+    {
+        if (pinged)
+        {
+            pinged = false;
+            pingEvent?.Invoke(higestPing);
+            higestPing = 0;
+        }
     }
 }
