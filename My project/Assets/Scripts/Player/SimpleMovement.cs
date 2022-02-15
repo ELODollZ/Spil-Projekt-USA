@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Af Rasmus
+// Movement af spiller
 
 public class SimpleMovement : MonoBehaviour
 {
