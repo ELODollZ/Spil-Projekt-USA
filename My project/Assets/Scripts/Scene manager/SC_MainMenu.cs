@@ -11,13 +11,13 @@ public class SC_MainMenu : MonoBehaviour
 
     public void PlayButton()
     {
-        // Start spillet når der bliver trykket på Play knappen
-        SceneManager.LoadScene("Floor 1");
+        // Starter spillet og sætter spilleren på Floor 1 når man trykker på Play knappen
+        SceneManager.LoadScene(1);
     }
 
     public void QuitButton()
     {
-        // Quit game
+        // Slutter spillet når man trykker på Quit knappen 
         Application.Quit();
     }
 }
