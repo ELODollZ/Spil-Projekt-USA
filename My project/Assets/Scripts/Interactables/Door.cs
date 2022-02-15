@@ -5,38 +5,59 @@ using SoundWaveSystem;
 using Misc.Events;
 
 // af rasmus
+// styring af dør
 
 public class Door : MonoBehaviour, IInteractable, ISoundOrigin
 {
     public event MakeSound makeSound;
 
+    [Tooltip("flalse er med uret, true er mod uret")]
     [SerializeField]
-    float soundDistance = 15;
+    //flalse er med uret, true er mod uret
+    bool openDir = false;
 
     [SerializeField]
-    private bool open = false;
+    float soundDistance = 15;
 
     [SerializeField]
     Animator animator;
 
     [SerializeField]
-    float delayForSound = 0.3f;
+    float delayForSound = 0.2f, doorOpenState = 0.5f, doorSpeed = 1;
 
     [SerializeField]
     FloatEvent onOriginPing;
 
     bool pinged = false;
 
-    float higestPing = 0;
+    float higestPing = 0, doorDesierdState;
+
+    public Vector2 position { get { return (Vector2)transform.position; } }
 
     private void Start()
     {
-        animator.SetBool("Open", open);
+        doorDesierdState = doorOpenState;
+        animator.SetFloat("Blend", doorOpenState);
     }
 
+    //når spillern Interact med døren
     public void Interact()
     {
-        open = !open;
+        if (doorDesierdState > 0.5f || doorDesierdState < 0.5f)
+        {
+            doorDesierdState = 0.5f;
+        }else
+        {
+            if (openDir)
+            {
+                doorDesierdState = 1;
+            }
+            else
+            {
+                doorDesierdState = 0;
+            }
+        }
+
         StartCoroutine(PlaySoundLate(delayForSound));
     }
 
@@ -52,6 +73,7 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
     private IEnumerator PlaySoundLate(float delay)
     {
         yield return new WaitForSeconds(delay);
+        Debug.Log("did sound");
         makeSound?.Invoke(soundDistance);
     }
 
@@ -63,6 +85,20 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
             onOriginPing?.Invoke(higestPing);
             higestPing = 0;
             pinged = false;
+        }
+
+        //Åbner eller lukker døren
+        if (doorDesierdState < doorOpenState)
+        {
+            doorOpenState -= Time.deltaTime * doorSpeed;
+            if (doorOpenState < doorDesierdState) doorOpenState = doorDesierdState;
+            animator.SetFloat("Blend", doorOpenState);
+        }
+        else if (doorDesierdState > doorOpenState)
+        {
+            doorOpenState += Time.deltaTime * doorSpeed;
+            if (doorOpenState > doorDesierdState) doorOpenState = doorDesierdState;
+            animator.SetFloat("Blend", doorOpenState);
         }
     }
 }

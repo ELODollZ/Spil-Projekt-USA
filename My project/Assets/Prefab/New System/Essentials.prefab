@@ -195,7 +195,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859182599}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -507,9 +507,9 @@ GameObject:
   - component: {fileID: 1273886684296396621}
   - component: {fileID: 1273886684296396620}
   - component: {fileID: 1273886684296396595}
-  - component: {fileID: 1273886684296396593}
   - component: {fileID: 1273886684296396594}
   - component: {fileID: 1273886684296396592}
+  - component: {fileID: 4519354076285908601}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -652,9 +652,9 @@ MonoBehaviour:
   pingEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1273886684296396593}
-        m_TargetAssemblyTypeName: PlayerPingVisual, Assembly-CSharp
-        m_MethodName: Pinged
+      - m_Target: {fileID: 1273886684736961001}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -707,19 +707,6 @@ MonoBehaviour:
   hitLayerFirstRay:
     serializedVersion: 2
     m_Bits: 128
---- !u!114 &1273886684296396593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273886684296396618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72820e19ab14455479b94c9d16fed271, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ParticleSystem: {fileID: 1273886684736961001}
 --- !u!114 &1273886684296396594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,6 +748,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDampening: 10
+--- !u!114 &4519354076285908601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273886684296396618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bba81f0f91780b46aa86f8e65674bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactDistance: 4
 --- !u!1 &1273886684329995147
 GameObject:
   m_ObjectHideFlags: 0
