@@ -6,6 +6,7 @@ using Misc;
 using Misc.Events;
 
 //af Rasmus
+//bruger en timer til at lave lydblølger efter x tid
 
 public class SoundAfterRandomTime : MonoBehaviour, ISoundOrigin
 {
@@ -45,6 +46,7 @@ public class SoundAfterRandomTime : MonoBehaviour, ISoundOrigin
     {
         timer.Tick(Time.deltaTime);
 
+        //hvis noget pingede 
         if (pinged)
         {
             originPinged?.Invoke(higestPing);
