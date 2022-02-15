@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//af Rasmus
+
 public class AfterImage : MonoBehaviour
 {
     SpriteRenderer spriteRendererOfObj;
@@ -15,13 +17,14 @@ public class AfterImage : MonoBehaviour
     float imageTime;
     float imageTimeLeft;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         spriteRendererOfObj = GetComponent<SpriteRenderer>();
         rendererOfAfterImage.transform.parent = null;
     }
 
+    //viser after image. Bruger den nuværnde sprit fra animation på spilleren og putter den på after imaget
     public void CreateAfterImage(float power)
     {
         rendererOfAfterImage.sprite = spriteRendererOfObj.sprite;
@@ -31,6 +34,7 @@ public class AfterImage : MonoBehaviour
         imageTimeLeft = imageTime;
     }
 
+    //after image fader langsomt
     private void Update()
     {
         if (imageTimeLeft > 0)
