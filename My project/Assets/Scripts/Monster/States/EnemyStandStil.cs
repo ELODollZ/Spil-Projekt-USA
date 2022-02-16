@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using SoundWaveSystem;
+
+
+// AI state står stille
+public class EnemyStandStil : AIState
+{
+    [SerializeField] float heringMin = 1f;
+
+    [SerializeField] AIState stateWhenHearSound;
+
+    public override AIState HandleSoundHit(ISoundOrigin origin, IHitObj[] hits, float disLeft)
+    {
+        if (disLeft > heringMin)
+        {
+            return stateWhenHearSound;
+        }
+
+        return this;
+    }
+
+    public override AIState UpdateState(float deltaTime)
+    {
+        return this;
+    }
+}

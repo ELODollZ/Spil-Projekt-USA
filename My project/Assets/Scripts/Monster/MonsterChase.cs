@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using SoundWaveSystem;
 using UnityEngine;
 
 //Af Tobias
 
-public class MonsterChase : MonoBehaviour
+// ændringer af rasmus
+// Skiftede scriptet væk fra monobehavier til AIState så det kunne inkoboreres i Moster State systemet
+
+public class MonsterChase : AIState
 {
 
-    public Transform Player;
+    //public Transform Player;
    
     // Gør så man kan sætte speed inde i Inspectoren
     [SerializeField] 
@@ -18,43 +22,66 @@ public class MonsterChase : MonoBehaviour
     
     private float range;
 
-    // Sætter distance mellem skridt som monsteret tager. Det skal bruges til particles på monsteret
-    [SerializeField]
-    float disBetweenStep;
-    
-    float disToNextStep;
 
-    Vector2 lastPos;
-    
+    #region Rasmus Tilføjede af variabler
+    [SerializeField] float intrestTime = 3;
+
+    float timeToStopIntrest;
+
+    [SerializeField] AIState stateafterLoseIntrest;
+
+    //afstater den tideliger Player transmorm variabel
+    Vector2 chasePoint;
+    #endregion
+
     // Gør så man kan vælge de particles som vi vil bruge på monsteret
     [SerializeField] ParticleSystem m_ParticleSystem;
 
-   
-    void Start()
+    public override AIState HandleSoundHit(ISoundOrigin origin, IHitObj[] hits, float disLeft)
     {
-        disToNextStep = disBetweenStep;
+        //finder starts positionen af den lyd reflektion eller lydkilde som mosteret hørte
+        if (hits[0] == null) chasePoint = origin.SoundPos;
+        else
+        {
+            for (int i = 2; i < hits.Length; i++)
+            {
+                if (hits[i] == null)
+                {
+                    chasePoint = hits[i - 1].HitPos;
+                }
+                else
+                {
+                    chasePoint = hits[i].HitPos;
+                }
+            }
+        }
+
+        timeToStopIntrest = intrestTime;
+
+        return this;
     }
 
-    void Update()
+    
+    public override AIState UpdateState(float deltaTime)
     {
+        #region Tobiases del fra update funktion
         // sets the range between the monster and the player
-        range = Vector2.Distance(transform.position, Player.position);
+        range = Vector2.Distance(transform.position, chasePoint);
 
         // Siger at hvis spilleren er inden for max distance mellem spiller og monster
         if (range < maxDis)
         {
             // Så begynder monsteret at bevæger sig mod spilleren
-            transform.position = Vector2.MoveTowards(transform.position, Player.position, Speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, chasePoint, Speed * Time.deltaTime);
         }
-
-        // plays the sound waves every few steps
-        disToNextStep -= Vector2.Distance(lastPos, (Vector2)transform.position);
-        lastPos = transform.position;
-
-        if (disToNextStep <= 0)
+        #endregion
+        //hvis der er gået længe siden nogen lyd skete skift 
+        timeToStopIntrest -= deltaTime;
+        if (timeToStopIntrest < 0)
         {
-            disToNextStep = disBetweenStep;
-            m_ParticleSystem.Play();
+            return stateafterLoseIntrest;
         }
+
+        return this;
     }
 }

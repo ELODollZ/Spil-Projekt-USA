@@ -10,6 +10,8 @@ using Misc.Events;
 
 public class PlayerNewSoundTest : MonoBehaviour, ISoundOrigin
 {
+    public Vector2 SoundPos
+    { get { return (Vector2)transform.position; } }
     public event MakeSound makeSound;
 
     [Header("Sound Stuff")]

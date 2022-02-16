@@ -11,6 +11,7 @@ namespace SoundWaveSystem
     {
         void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft, float fullDis);
         void Ping();
+        Vector2 HitPos { get; }
         //GameObject getOriginObj();
         float Dampening { get; }
         void EndOfRay();
@@ -20,6 +21,7 @@ namespace SoundWaveSystem
     public interface ISoundOrigin
     {
         event MakeSound makeSound;
+        Vector2 SoundPos { get; }
         void Ping(float power);
     }
 

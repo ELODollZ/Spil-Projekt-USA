@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 //af Rasmus
-    // et simpelt scrip der laver en event efet en vis distance er flytet
+    // et simpelt scrip der laver en event efter en vis distance er flytet
 public class PlayerSoundAfterStep : MonoBehaviour
 {
     [SerializeField]

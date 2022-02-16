@@ -3,23 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // af Rasmus
+// hoved mechaninc i vores spil
+// scriptet bruges til at sende rays ud fro at finde ud af hvordan lyd bouncer undt i rumet
 
 namespace SoundWaveSystem
 {
     public class RaySoundWave : MonoBehaviour
     {
-        [SerializeField]
-        bool debuger;
+        [SerializeField] bool debuger;
 
-        [SerializeField]
-        int soundDetail = 360;
+        // hvor mange rays der bliver skudt ud, og der for hvor detaljerede lyd reflektion der laves
+        [SerializeField] int soundDetail = 360;
 
-        [SerializeField]
-        LayerMask hitLayer, hitLayerFirstRay;
+        [SerializeField] LayerMask hitLayer, hitLayerFirstRay;
+
 
         ISoundOrigin soundOrigin;
-
         float maxDis;
+
+
 
         private void Awake()
         {
@@ -43,6 +45,7 @@ namespace SoundWaveSystem
             for (int i = 0; i < soundDetail; i++)
             {
                 IHitObj[] hits = new IHitObj[10];
+                Vector2[] hitPoints = new Vector2[10];
                 SubRay(transform.position, new Vector2(Mathf.Cos(angelPerStep * i * Mathf.Deg2Rad), Mathf.Sin(angelPerStep * i * Mathf.Deg2Rad)), dis, angelPerStep * i, hits, 0, Vector2.zero);
             }
         }

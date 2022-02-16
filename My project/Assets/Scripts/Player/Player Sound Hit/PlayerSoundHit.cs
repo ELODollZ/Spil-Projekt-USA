@@ -14,6 +14,8 @@ public class PlayerSoundHit : MonoBehaviour, IHitObj
 
     public float Dampening { get { return soundDampening; } }
 
+    public Vector2 HitPos { get { return transform.position; } }
+
     //når spilleren bliver ramt beder den alt andet der var ramt af den samme ray at blive pinget, der bliver også affyret en event med lyd så spille lyd kan gøre ting
     public void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft, float maxDis)
     {

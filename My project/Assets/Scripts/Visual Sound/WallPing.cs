@@ -12,6 +12,8 @@ public class WallPing : MonoBehaviour, IHitObj
 
     public float Dampening { get { return dampening; } }
 
+    public Vector2 HitPos { get { return hitpoints[hitpoints.Count - 1]; } }
+
     List<Vector2> hitpoints =  new List<Vector2>(10);
 
     List<Vector2> toShow = new List<Vector2>(500);
