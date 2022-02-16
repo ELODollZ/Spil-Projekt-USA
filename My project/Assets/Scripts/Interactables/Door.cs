@@ -5,7 +5,7 @@ using SoundWaveSystem;
 using Misc.Events;
 
 // af rasmus
-// styring af dør
+// styring af door
 
 public class Door : MonoBehaviour, IInteractable, ISoundOrigin
 {
@@ -23,11 +23,13 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
     Animator animator;
 
     [SerializeField]
-    float delayForSound = 0.2f, doorOpenState = 0.5f, doorSpeed = 1;
+    float doorOpenState = 0.5f, doorSpeed = 1;
 
     [SerializeField]
-    FloatEvent onOriginPing;
+    FloatEvent onOriginPing1, onOriginPing2;
 
+
+    int eventToTriger = 0;
     bool pinged = false;
 
     float higestPing = 0, doorDesierdState;
@@ -57,8 +59,8 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
                 doorDesierdState = 0;
             }
         }
-
-        StartCoroutine(PlaySoundLate(delayForSound));
+        eventToTriger = 0;
+        makeSound?.Invoke(soundDistance);
     }
 
     public void Ping(float power)
@@ -70,19 +72,19 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
         }
     }
 
-    private IEnumerator PlaySoundLate(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        Debug.Log("did sound");
-        makeSound?.Invoke(soundDistance);
-    }
-
     private void Update()
     {
         //hvis noget pingede 
         if (pinged)
         {
-            onOriginPing?.Invoke(higestPing);
+            if (eventToTriger == 0)
+            {
+                onOriginPing1?.Invoke(higestPing);
+            }
+            else
+            {
+                onOriginPing2?.Invoke(higestPing);
+            }
             higestPing = 0;
             pinged = false;
         }
@@ -91,13 +93,22 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
         if (doorDesierdState < doorOpenState)
         {
             doorOpenState -= Time.deltaTime * doorSpeed;
-            if (doorOpenState < doorDesierdState) doorOpenState = doorDesierdState;
+            if (doorOpenState < doorDesierdState) {
+                doorOpenState = doorDesierdState;
+                eventToTriger = 1;
+                makeSound?.Invoke(soundDistance);
+            }
             animator.SetFloat("Blend", doorOpenState);
         }
         else if (doorDesierdState > doorOpenState)
         {
             doorOpenState += Time.deltaTime * doorSpeed;
-            if (doorOpenState > doorDesierdState) doorOpenState = doorDesierdState;
+            if (doorOpenState > doorDesierdState)
+            {
+                doorOpenState = doorDesierdState;
+                eventToTriger = 1;
+                makeSound?.Invoke(soundDistance);
+            }
             animator.SetFloat("Blend", doorOpenState);
         }
     }

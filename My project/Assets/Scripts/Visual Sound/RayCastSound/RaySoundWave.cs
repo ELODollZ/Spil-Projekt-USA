@@ -9,6 +9,9 @@ namespace SoundWaveSystem
     public class RaySoundWave : MonoBehaviour
     {
         [SerializeField]
+        bool debuger;
+
+        [SerializeField]
         int soundDetail = 360;
 
         [SerializeField]
@@ -22,6 +25,11 @@ namespace SoundWaveSystem
         {
             soundOrigin = GetComponent<ISoundOrigin>();
             soundOrigin.makeSound += ShootRay;
+
+            if (debuger)
+            {
+                soundOrigin.Ping(1);
+            }
         }
 
 

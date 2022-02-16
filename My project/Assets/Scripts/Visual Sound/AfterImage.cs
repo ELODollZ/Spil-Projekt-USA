@@ -29,6 +29,7 @@ public class AfterImage : MonoBehaviour
     {
         rendererOfAfterImage.sprite = spriteRendererOfObj.sprite;
         rendererOfAfterImage.transform.position = transform.position;
+        rendererOfAfterImage.transform.rotation = transform.rotation;
         rendererOfAfterImage.flipX = spriteRendererOfObj.flipX;
         imageTime = afterImageTime * power;
         imageTimeLeft = imageTime;
