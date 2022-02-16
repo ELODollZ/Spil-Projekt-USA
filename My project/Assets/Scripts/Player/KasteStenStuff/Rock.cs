@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SoundWaveSystem;
 //Made By Editor: Daniel M�nster Nybo (Rock scripts)
-public class Rock : MonoBehaviour
+public class Rock : MonoBehaviour, ISoundOrigin
 {
     //lave variable for hhv. levetiden af rock for at den ikke overloader ens computer, hastigheden af rock, og rigidbody
     private Rigidbody2D rb2d;
@@ -11,12 +12,8 @@ public class Rock : MonoBehaviour
     //gør så man kan sætte et particel system på i unity
     [SerializeField]
     ParticleSystem particleSystem;
-    void Start()
-    {
-        //kalder i starten rigidbody fra unity og giver den velocity, og retter den mod højre og ganger noget speed på.
-        rb2d = GetComponent<Rigidbody2D>();
-        rb2d.velocity = transform.right * speedAfKastingRock;
-    }
+
+    public event MakeSound makeSound;
 
     public void Update()
     {
@@ -32,7 +29,11 @@ public class Rock : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //aktivere particlesystemet.
-        particleSystem.Play();
+        makeSound?.Invoke(20);
     }
 
+    public void Ping(float power)
+    {
+        particleSystem.Play();
+    }
 }

@@ -8,19 +8,19 @@ public class Throwing : MonoBehaviour
     [SerializeField]
     public GameObject rock;
     public Transform firePoint;
-    public float throwingSpeed = 50;
+    public float throwingSpeed = 10;
     Vector2 lookDirection;
     float lookAngle;
     void Update()
     {
         //Sætter variablen lookDirection til main Camera og bruger Math til at udregne position til LookDirection og omregner fra radians til degres
-        lookDirection = Camera.main.WorldToScreenPoint(Input.mousePosition);
+        lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition)-transform.position;
         lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
 
         firePoint.rotation = Quaternion.Euler(0, 0, lookAngle);
         //Ved Space køres funktion af at kalde et objectclone Rock og sætter den ved firepoint.right og så en debug til udskrive i consolen at den faktisk kan tjekke om der bliver trykket på Space
         //Kalder også Rigidbody og sætter en veolcity på Rock clonerne som indsætters ved firePoint.
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             GameObject rockClone = Instantiate(rock);
             rockClone.transform.position = firePoint.position;
