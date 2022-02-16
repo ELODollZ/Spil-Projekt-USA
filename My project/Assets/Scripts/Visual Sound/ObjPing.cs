@@ -17,6 +17,8 @@ public class ObjPing : MonoBehaviour, IHitObj
 
     public float Dampening { get { return soundDampening; } }
 
+    public Vector2 HitPos { get { return transform.position; } }
+
     bool pinged;
     bool hit;
 

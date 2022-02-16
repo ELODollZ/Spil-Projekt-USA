@@ -28,6 +28,8 @@ public class SoundAfterRandomTime : MonoBehaviour, ISoundOrigin
 
     public event MakeSound makeSound;
 
+    public Vector2 SoundPos
+    { get { return (Vector2)transform.position; } }
 
     public void Ping(float power)
     {

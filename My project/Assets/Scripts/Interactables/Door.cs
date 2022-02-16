@@ -36,6 +36,9 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
 
     public Vector2 position { get { return (Vector2)transform.position; } }
 
+    public Vector2 SoundPos
+    { get { return (Vector2)transform.position; }}
+
     private void Start()
     {
         doorDesierdState = doorOpenState;
