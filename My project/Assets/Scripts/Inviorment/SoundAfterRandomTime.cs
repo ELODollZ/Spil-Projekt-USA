@@ -6,7 +6,7 @@ using Misc;
 using Misc.Events;
 
 //af Rasmus
-//bruger en timer til at lave lydblølger efter x tid
+//bruger en timer til at lave lydblølger efter tilfældig tide mellem timeMin og timeMax
 
 public class SoundAfterRandomTime : MonoBehaviour, ISoundOrigin
 {
@@ -22,8 +22,10 @@ public class SoundAfterRandomTime : MonoBehaviour, ISoundOrigin
 
 
     Timer timer;
+
     bool pinged;
     float higestPing = 0;
+
     public event MakeSound makeSound;
 
 

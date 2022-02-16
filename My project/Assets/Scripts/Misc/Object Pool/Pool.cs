@@ -1,4 +1,5 @@
 //af Rasmus
+// general classe til Poolling af objekter
 
 namespace Misc.Pool
 {
@@ -17,6 +18,7 @@ namespace Misc.Pool
             this.pool = pool;
         }
 
+        //giver det næste objekt i pool listen
         public t GetNext()
         {
             if (next == pool.Length)

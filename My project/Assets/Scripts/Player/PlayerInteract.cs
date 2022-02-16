@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//af rasmus
+// scriptet giver spilleren mulighed for at interagere med objekter sålænge de har interfacen IInteractable
+
 public class PlayerInteract : MonoBehaviour
 {
     [SerializeField]
@@ -21,7 +24,7 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-
+    //finder Interactable objekter i en radius af spillern, hvis der er mere end en bliver den nærmeste valgt
     private IInteractable InteractObj()
     {
         //finder ting der kan intergeresmed

@@ -25,13 +25,7 @@ public class PlayerSoundHit : MonoBehaviour, IHitObj
         }
     }
 
-    public void Ping()
-    {
-        
-    }
+    public void Ping(){    }
 
-    public void EndOfRay()
-    {
-
-    }
+    public void EndOfRay(){    }
 }

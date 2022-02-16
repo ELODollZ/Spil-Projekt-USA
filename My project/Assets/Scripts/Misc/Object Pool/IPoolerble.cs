@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //af rasmus
+// søre for at alle pool objekter har en Instantiate funktion der fungere på nogenlunde samme måde som den normale Instantiate funktion i Unity
 
 public interface IPoolerble
 {

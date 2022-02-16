@@ -5,7 +5,9 @@ using Misc;
 using UnityEngine.Experimental.Rendering.Universal;
 
 //af Rasmus
-    //Scriptet står for at vise et obj i lidt tid
+//Scriptet står for at vise et obj i lidt tid, Det gør den hved at bruge unitys 2d lys fra deres Universal Renderer.
+// dise obj er primært ment til brug med vægene i spille da det var meget vigtigt at hele vægen ikke lyste op på en gang
+//fordi der bruges mange af dem er de lavet så de kan bruges i en obj pool
 
 public class PingedTimedDisapering : MonoBehaviour, IPoolerble
 {
@@ -18,7 +20,7 @@ public class PingedTimedDisapering : MonoBehaviour, IPoolerble
 
     public event SimpleCall disabledEvent;
 
- 
+    //den alternative start funktion til pool objekter der kaldes fra de stripts der skal bruge dem
     public GameObject PoolInstantiate(Vector2 pos, Vector3 rot)
     {
         transform.position = pos;
@@ -38,6 +40,7 @@ public class PingedTimedDisapering : MonoBehaviour, IPoolerble
 
     private void Update()
     {
+        //fader lys
         timer.Tick(Time.deltaTime);
         m_light.intensity = timer.TimeLeft/timer.TimerLengh;
     }

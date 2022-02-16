@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Misc.Pool;
 //af Rasmus
-
     //En object pooler for optimisering
 
 public class Pooler : MonoBehaviour
@@ -13,7 +12,9 @@ public class Pooler : MonoBehaviour
 
     Pool<GameObject>[] pools;
 
+    //en singelton, gør det muligt for andre skripts at næmt få adgang til Pooleren
     public static Pooler poolerSingelton;
+
 
     private void Awake()
     {
