@@ -26,8 +26,8 @@ public class Throwing : MonoBehaviour
             rockClone.transform.position = firePoint.position;
             rockClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
 
-            rockClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * throwingSpeed;
-            Debug.Log("throwen");
+            rockClone.GetComponent<Rigidbody2D>().velocity = firePoint.position * throwingSpeed;
+
         }
     }
 
