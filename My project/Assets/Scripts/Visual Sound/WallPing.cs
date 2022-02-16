@@ -18,14 +18,16 @@ public class WallPing : MonoBehaviour, IHitObj
 
     bool pinged = false;
 
+    //en liste til at holde styr på active Ping obj for at kunne optimisere
     List<PingedTimedDisapering> activePoolItems = new List<PingedTimedDisapering>(1300);
 
+    //når vægen bliver ramt tilføjer den det sted til en liste så den kan pinge alle de steder der blev ramt hvis rayen også rammer spilleren
     public void Hit(ISoundOrigin origin, IHitObj[] hits, Vector2 hitPoint, float disLeft, float maxDis)
     {
         hitpoints.Add(hitPoint);
     }
 
-    //når vægen bliver pinget
+    //når vægen bliver pinget, fløttes de steder der blev ramt til listen der skal vises
     public void Ping()
     {
         toShow.AddRange(hitpoints);
@@ -61,7 +63,7 @@ public class WallPing : MonoBehaviour, IHitObj
     }
 
 
-    //Fjerner pings der var tæt på hinanden for at optimisere
+    //Fjerner pings der var tæt på hinanden for at optimisere, dette mer end halverede mængde af objekter der blev spawnet
     private void OptimizePreSpawns()
     {
         for (int i = 0; i < toShow.Count; i++)
@@ -93,13 +95,14 @@ public class WallPing : MonoBehaviour, IHitObj
         return false;
     }
 
+    //fjerner ping obj fra en liste når de ikke længere er aktive
     private void PingEnded(PingedTimedDisapering obj)
     {
         obj.disabledEvent -= PingEnded;
         activePoolItems.Remove(obj);
     }
 
-
+    //når en ray slutter fjernes alle punkter fra vægesn blev ramt liste så den er klar til den næste ray
     public void EndOfRay()
     {
         hitpoints.Clear();

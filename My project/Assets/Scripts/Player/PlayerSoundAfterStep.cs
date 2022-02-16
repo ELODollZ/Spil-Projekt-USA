@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 //af Rasmus
-    // et simpelt scrip der laver en event efet en vis distance er gået
+    // et simpelt scrip der laver en event efet en vis distance er flytet
 public class PlayerSoundAfterStep : MonoBehaviour
 {
     [SerializeField]
@@ -24,7 +24,6 @@ public class PlayerSoundAfterStep : MonoBehaviour
         lastPos = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         disToNextStep -= Vector2.Distance(lastPos, (Vector2)transform.position);

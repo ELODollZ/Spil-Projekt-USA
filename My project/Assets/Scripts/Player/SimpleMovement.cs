@@ -18,7 +18,6 @@ public class SimpleMovement : MonoBehaviour
     }
 
 
-    
     void Update()
     {
         Vector2 move = new Vector2(); ;

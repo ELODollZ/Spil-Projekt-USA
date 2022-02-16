@@ -1,6 +1,7 @@
 using System;
 
 //Af Rasmus
+// Et Timer script der sender en event når timmeren er færdig
 
 namespace Misc
 {
@@ -17,6 +18,7 @@ namespace Misc
             TimeLeft = time;
         }
 
+        //timeren ticker ikke selv men skal tikkes far et andet script
         public void Tick(float deltaTime)
         {
             if (TimeLeft == 0) return;

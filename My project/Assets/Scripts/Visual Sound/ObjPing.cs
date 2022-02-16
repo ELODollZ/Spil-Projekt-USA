@@ -4,6 +4,9 @@ using UnityEngine;
 using SoundWaveSystem;
 using UnityEngine.Events;
 
+//af rasmus
+// et genbrugeligt sound hit script, der bruger unity events til at gøre det muligt at sætte events op i editoren
+
 public class ObjPing : MonoBehaviour, IHitObj
 {
     [SerializeField]
@@ -29,14 +32,13 @@ public class ObjPing : MonoBehaviour, IHitObj
         pinged = true;
     }
 
-    public void EndOfRay()
-    {
-
-    }
+    //den funktíon er her kun for Interfacen
+    public void EndOfRay(){    }
 
 
     private void Update()
     {
+        //forde et obj højst sansyneligt bliver ramt af mere end en ray så sender den først at den er blevet ramt på den næste update
         if (pinged)
         {
             pinged = false;

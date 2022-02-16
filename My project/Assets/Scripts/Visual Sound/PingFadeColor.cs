@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// af Rasmus
+//et script der står for at fade alphaen af en sprite så den langsomt forsvinder
+
 public class PingFadeColor : MonoBehaviour
 {
     SpriteRenderer spriteRendererOfObj;
@@ -31,6 +34,7 @@ public class PingFadeColor : MonoBehaviour
         }
     }
 
+    //starter fade
     public void StartFadeOfColor(float power)
     {
         imageTime = fadeTime * power;

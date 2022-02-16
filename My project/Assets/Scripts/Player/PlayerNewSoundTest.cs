@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using Misc.Events;
 
 //af Rasmus
-// skriptet stå for at lave lyd fra spilleren
+// skriptet stå for at lave lyd rays fra spilleren
 
 public class PlayerNewSoundTest : MonoBehaviour, ISoundOrigin
 {
@@ -20,33 +20,14 @@ public class PlayerNewSoundTest : MonoBehaviour, ISoundOrigin
     [SerializeField]
     FloatEvent pingEvent;
 
-
-    bool pinged = false;
-    float higestPing = 0;
-
-
+    //når denne funktion bliver klade sender spilleren lyd rays
     public void MakeSound()
     {
         makeSound?.Invoke(soundDis);
-        Ping(1);
+        //Event at spilleren blev pinget, bliver kaldt med det samme og med maks styrke fordi spilleren altid høre sine fodspor på fuld styrke
+        pingEvent?.Invoke(1);
     }
 
-    public void Ping(float power)
-    {
-        pinged = true;
-        if (higestPing < power)
-        {
-            higestPing = power;
-        }
-    }
 
-    private void Update()
-    {
-        if (pinged)
-        {
-            pinged = false;
-            pingEvent?.Invoke(higestPing);
-            higestPing = 0;
-        }
-    }
+    public void Ping(float power){    }
 }

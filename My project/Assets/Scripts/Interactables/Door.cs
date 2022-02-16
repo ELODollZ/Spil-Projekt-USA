@@ -74,7 +74,7 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
 
     private void Update()
     {
-        //hvis noget pingede 
+        //hvis døren blev pinget
         if (pinged)
         {
             if (eventToTriger == 0)
@@ -98,6 +98,7 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
                 eventToTriger = 1;
                 makeSound?.Invoke(soundDistance);
             }
+            //bruger animation Blend til at styre dens position
             animator.SetFloat("Blend", doorOpenState);
         }
         else if (doorDesierdState > doorOpenState)
@@ -109,6 +110,7 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
                 eventToTriger = 1;
                 makeSound?.Invoke(soundDistance);
             }
+            //bruger animation Blend til at styre dens position
             animator.SetFloat("Blend", doorOpenState);
         }
     }

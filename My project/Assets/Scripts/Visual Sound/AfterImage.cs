@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //af Rasmus
+// laver afterimages af en sprite/obj
 
 public class AfterImage : MonoBehaviour
 {
