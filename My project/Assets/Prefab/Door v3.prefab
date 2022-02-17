@@ -151,8 +151,7 @@ GameObject:
   - component: {fileID: 4138653147813403299}
   - component: {fileID: 4138653147813403300}
   - component: {fileID: 4138653147813403301}
-  - component: {fileID: 516003598550271808}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Door v3
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -282,39 +281,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debuger: 0
-  soundDetail: 100
+  soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 1472
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 1104
---- !u!61 &516003598550271808
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4138653147813403302}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.65625, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.9375, y: 0.5}
-    oldSize: {x: 1.5, y: 0.25}
-    newSize: {x: 1.5, y: 0.25}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 0.25}
-  m_EdgeRadius: 0
+    m_Bits: 448
 --- !u!1 &4138653148080923680
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +301,7 @@ GameObject:
   - component: {fileID: 4138653148080923709}
   - component: {fileID: 4138653148080923705}
   - component: {fileID: 4138653148080923704}
+  - component: {fileID: 1121182058}
   m_Layer: 10
   m_Name: Door v2
   m_TagString: Untagged
@@ -466,6 +440,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 1.5
+--- !u!61 &1121182058
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138653148080923680}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.65625, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.9375, y: 0.5}
+    oldSize: {x: 1.5, y: 0.25}
+    newSize: {x: 1.5, y: 0.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 0.25}
+  m_EdgeRadius: 0
 --- !u!1 &4138653148787497521
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 4138653147613784419}
   - component: {fileID: 4138653147613784418}
   - component: {fileID: 4005224901686719548}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: N Sound Wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
