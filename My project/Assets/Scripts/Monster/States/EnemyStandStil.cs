@@ -13,6 +13,7 @@ public class EnemyStandStil : AIState
 
     public override AIState HandleSoundHit(ISoundOrigin origin, Vector2 soundPoint, float disLeft)
     {
+        // hvis mosteret høre en lyd høj nok skifter den stadie
         if (disLeft > heringMin)
         {
             stateWhenHearSound.HandleSoundHit(origin, soundPoint, disLeft);

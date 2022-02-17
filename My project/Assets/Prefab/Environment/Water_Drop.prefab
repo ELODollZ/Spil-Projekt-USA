@@ -186,13 +186,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4937a48ec60464aaa59635e04e8e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debuger: 0
   soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 1216
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 1216
 --- !u!114 &1702718760615840343
 MonoBehaviour:
   m_ObjectHideFlags: 0

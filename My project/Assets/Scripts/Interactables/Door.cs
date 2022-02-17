@@ -11,7 +11,7 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
 {
     public event MakeSound makeSound;
 
-    [Tooltip("flalse er med uret, true er mod uret")]
+    [Tooltip("True er med uret, False er mod uret")]
     [SerializeField]
     //flalse er med uret, true er mod uret
     bool openDir = false;
@@ -28,6 +28,8 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
     [SerializeField]
     FloatEvent onOriginPing1, onOriginPing2;
 
+    [SerializeField]
+    bool locked = false;
 
     int eventToTriger = 0;
     bool pinged = false;
@@ -48,6 +50,10 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
     //når spillern Interact med døren
     public void Interact()
     {
+        //gør ikke noget hvis døren er låst
+        if (locked) return;
+
+        // får døren til at åbne
         if (doorDesierdState > 0.5f || doorDesierdState < 0.5f)
         {
             doorDesierdState = 0.5f;
@@ -116,5 +122,10 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
             //bruger animation Blend til at styre dens position
             animator.SetFloat("Blend", doorOpenState);
         }
+    }
+
+    public void Unlock()
+    {
+        locked = false;
     }
 }

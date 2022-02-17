@@ -10,6 +10,8 @@ public class EnemyAI : MonoBehaviour, IHitObj
 
     [SerializeField] float soundDampening = 1;
 
+    [SerializeField] UnityEvent HitPing;
+
     public float Dampening { get { return soundDampening; } }
 
     public Vector2 HitPos {get { return transform.position; } }
@@ -73,6 +75,7 @@ public class EnemyAI : MonoBehaviour, IHitObj
     }
     public void Ping()
     {
+        HitPing?.Invoke();
     }
 
     //hvis monstert rammer noget

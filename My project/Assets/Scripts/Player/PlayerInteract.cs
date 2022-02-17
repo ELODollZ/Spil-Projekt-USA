@@ -33,6 +33,7 @@ public class PlayerInteract : MonoBehaviour
         for (int i = 0; i < hits.Length; i++)
         {
             IInteractable interactable = hits[i].GetComponentInParent<IInteractable>();
+            if (interactable == null) hits[i].GetComponent<IInteractable>();
             if (interactable != null)
             {
                 interactables.Add(interactable);
