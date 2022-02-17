@@ -735,10 +735,10 @@ MonoBehaviour:
   soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 1472
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 1152
+    m_Bits: 1408
 --- !u!114 &1273886684296396594
 MonoBehaviour:
   m_ObjectHideFlags: 0
