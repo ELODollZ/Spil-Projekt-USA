@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7983654342016881040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9899993, y: -10.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7983654342504225582}
@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 7983654342130275184}
   - component: {fileID: 7983654342130275198}
   - component: {fileID: 7983654342130275199}
+  - component: {fileID: 372649359}
   m_Layer: 8
   m_Name: Ai States
   m_TagString: Untagged
@@ -239,7 +240,7 @@ MonoBehaviour:
   intrestTime: 3
   monster: {fileID: 7983654342504225582}
   rb2d: {fileID: 7983654342504225577}
-  stateafterLoseIntrest: {fileID: 7983654342130275199}
+  stateafterLoseIntrest: {fileID: 372649359}
   chasePoint: {x: 0, y: 0}
 --- !u!114 &7983654342130275199
 MonoBehaviour:
@@ -255,6 +256,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heringMin: 1
   stateWhenHearSound: {fileID: 7983654342130275198}
+--- !u!114 &372649359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983654342130275185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3917eddea47a51b47b539f0bc6fe9683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 7983654342504225582}
+  folowPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  speed: 2
+  loop: 0
+  heringMin: 1
+  stateWhenHearSound: {fileID: 7983654342130275198}
 --- !u!1 &7983654342504225570
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +293,7 @@ GameObject:
   - component: {fileID: 7983654342504225583}
   - component: {fileID: 7983654342504225568}
   - component: {fileID: 7983654342504225569}
-  - component: {fileID: 7983654342504225578}
+  - component: {fileID: 3777409081328087390}
   - component: {fileID: 7983654342504225579}
   - component: {fileID: 7983654342504225580}
   - component: {fileID: 7983654342504225581}
@@ -377,8 +403,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8a63f10e94bc04399b5c7c78b2fab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aIState: {fileID: 7983654342130275199}
+  aIState: {fileID: 372649359}
   soundDampening: 1
+  HitPing:
+    m_PersistentCalls:
+      m_Calls: []
   OnBonk:
     m_PersistentCalls:
       m_Calls:
@@ -394,7 +423,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7983654342504225578
+--- !u!114 &3777409081328087390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403,7 +432,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7983654342504225570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6afad003dbc10a644b94fd6f0eced808, type: 3}
+  m_Script: {fileID: 11500000, guid: 1725d9cd926871b498844b63d67f6c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   soundDis: 20
@@ -430,7 +459,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -462,8 +491,8 @@ MonoBehaviour:
   step:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7983654342504225578}
-        m_TargetAssemblyTypeName: PlayerNewSoundTest, Assembly-CSharp
+      - m_Target: {fileID: 3777409081328087390}
+        m_TargetAssemblyTypeName: MMakeSound, Assembly-CSharp
         m_MethodName: MakeSound
         m_Mode: 1
         m_Arguments:
@@ -555,7 +584,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7983654342613745220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.99, y: -10.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7983654342504225582}

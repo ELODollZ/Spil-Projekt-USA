@@ -13,20 +13,21 @@ public class Throwing : MonoBehaviour
     float lookAngle;
     void Update()
     {
-        //Sætter variablen lookDirection til main Camera og bruger Math til at udregne position til LookDirection og omregner fra radians til degres
-        lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition)-transform.position;
-        lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
-
-        firePoint.rotation = Quaternion.Euler(0, 0, lookAngle);
         //Ved Space køres funktion af at kalde et objectclone Rock og sætter den ved firepoint.right og så en debug til udskrive i consolen at den faktisk kan tjekke om der bliver trykket på Space
         //Kalder også Rigidbody og sætter en veolcity på Rock clonerne som indsætters ved firePoint.
         if (Input.GetMouseButtonDown(0))
         {
+            //Sætter variablen lookDirection til main Camera og bruger Math til at udregne position til LookDirection og omregner fra radians til degres
+            lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - firePoint.position;
+            //lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+
+            firePoint.rotation = Quaternion.Euler(0, 0, lookAngle);
+
             GameObject rockClone = Instantiate(rock);
             rockClone.transform.position = firePoint.position;
             rockClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
 
-            rockClone.GetComponent<Rigidbody2D>().velocity = firePoint.position * throwingSpeed;
+            rockClone.GetComponent<Rigidbody2D>().velocity = lookDirection.normalized * throwingSpeed;
 
         }
     }

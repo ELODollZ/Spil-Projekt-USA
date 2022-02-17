@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Final Game Scenes/Main Menu.unity
+    path: Assets/Scenes/Actuel Game/Main Menu.unity
     guid: 3774536e4ca970f4f92f3f5b4dad57d0
   - enabled: 1
     path: Assets/Scenes/Actuel Game/Turtorial.unity

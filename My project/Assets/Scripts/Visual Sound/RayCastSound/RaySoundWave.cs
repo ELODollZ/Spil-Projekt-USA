@@ -45,7 +45,6 @@ namespace SoundWaveSystem
             for (int i = 0; i < soundDetail; i++)
             {
                 IHitObj[] hits = new IHitObj[10];
-                Vector2[] hitPoints = new Vector2[10];
                 SubRay(transform.position, new Vector2(Mathf.Cos(angelPerStep * i * Mathf.Deg2Rad), Mathf.Sin(angelPerStep * i * Mathf.Deg2Rad)), dis, angelPerStep * i, hits, 0, Vector2.zero);
                 EndRay(hits);
             }

@@ -2,40 +2,71 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SoundWaveSystem;
+using Misc.Events;
+
 //Made By Editor: Daniel M�nster Nybo (Rock scripts)
+// ændringer af Rasmus
+// Ændringer : gjorde så stenen bruger lydsystemet 
+
 public class Rock : MonoBehaviour, ISoundOrigin
 {
     //lave variable for hhv. levetiden af rock for at den ikke overloader ens computer, hastigheden af rock, og rigidbody
     private Rigidbody2D rb2d;
     [SerializeField]
-    public float speedAfKastingRock = 10f;float lifetime = 10f;
-    //gør så man kan sætte et particel system på i unity
-    [SerializeField]
-    ParticleSystem particleSystem;
+    float lifetime = 10f;
+
+    [SerializeField] FloatEvent PingEvent;
+
+    [SerializeField] float soundDis = 20;
 
     public Vector2 SoundPos { get { return transform.position; } }
 
     public event MakeSound makeSound;
 
+    bool pinged = false;
+    float power = 0;
+
+    private void Start()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+    }
+
     public void Update()
     {
-        //laver en livestid på gameobjects den skyder og ødelægger dem efter tiden er gået.
-        lifetime -= Time.deltaTime;
-        if (lifetime <= 0f)
+        if (pinged)
         {
-            Destroy(gameObject);
+            PingEvent?.Invoke(power);
+            pinged = false;
+            power = -1;
+        }
+
+        //laver en livestid på gameobjects den skyder og ødelægger dem efter tiden er gået.
+        if (lifetime > 0)
+        {
+            lifetime -= Time.deltaTime;
+            if (lifetime <= 0f)
+            {
+                makeSound?.Invoke(soundDis * 0.5f);
+                Destroy(gameObject, 1f);
+                rb2d.velocity = Vector2.zero;
+            }
         }
     }
 
     //laver en funktioner der invoker particlesystem når den rammer noget.
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //aktivere particlesystemet.
-        makeSound?.Invoke(20);
+        if (collision == null) return;
+
+        makeSound?.Invoke(soundDis);
     }
 
     public void Ping(float power)
     {
-        particleSystem.Play();
+        pinged = true;
+        if (this.power < power)
+        {
+            this.power = power;
+        }
     }
 }
