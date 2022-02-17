@@ -15,7 +15,6 @@ public class EnemyStandStil : AIState
     {
         if (disLeft > heringMin)
         {
-            Debug.Log("heard something");
             stateWhenHearSound.HandleSoundHit(origin, soundPoint, disLeft);
             return stateWhenHearSound;
         }

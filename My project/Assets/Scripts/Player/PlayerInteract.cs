@@ -32,7 +32,7 @@ public class PlayerInteract : MonoBehaviour
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, interactDistance);
         for (int i = 0; i < hits.Length; i++)
         {
-            IInteractable interactable = hits[i].GetComponent<IInteractable>();
+            IInteractable interactable = hits[i].GetComponentInParent<IInteractable>();
             if (interactable != null)
             {
                 interactables.Add(interactable);

@@ -534,7 +534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &665579958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,7 +777,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -57631,6 +57631,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9033976306947657028, guid: 81e4aa682ec414540916bf2a55fdd1a1, type: 3}
   m_PrefabInstance: {fileID: 1095275851}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1121182052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4138653148080923680, guid: 1c5bc5ca37f43a846b91c505fff15fda, type: 3}
+  m_PrefabInstance: {fileID: 4138653147771495567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1121182058
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121182052}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.65625, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.9375, y: 0.5}
+    oldSize: {x: 1.5, y: 0.25}
+    newSize: {x: 1.5, y: 0.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 0.25}
+  m_EdgeRadius: 0
 --- !u!1 &1220033287
 GameObject:
   m_ObjectHideFlags: 0
@@ -58059,9 +58090,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4138653147813403301, guid: 1c5bc5ca37f43a846b91c505fff15fda, type: 3}
+      propertyPath: soundDetail
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138653147813403301, guid: 1c5bc5ca37f43a846b91c505fff15fda, type: 3}
+      propertyPath: hitLayer.m_Bits
+      value: 1472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138653147813403301, guid: 1c5bc5ca37f43a846b91c505fff15fda, type: 3}
+      propertyPath: hitLayerFirstRay.m_Bits
+      value: 448
+      objectReference: {fileID: 0}
     - target: {fileID: 4138653147813403302, guid: 1c5bc5ca37f43a846b91c505fff15fda, type: 3}
       propertyPath: m_Name
       value: Door v3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4138653147813403302, guid: 1c5bc5ca37f43a846b91c505fff15fda, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662056432244949049, guid: 1c5bc5ca37f43a846b91c505fff15fda, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 516003598550271808, guid: 1c5bc5ca37f43a846b91c505fff15fda, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1c5bc5ca37f43a846b91c505fff15fda, type: 3}
