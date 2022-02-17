@@ -13,6 +13,8 @@ public class Rock : MonoBehaviour, ISoundOrigin
     [SerializeField]
     ParticleSystem particleSystem;
 
+    public Vector2 SoundPos { get { return transform.position; } }
+
     public event MakeSound makeSound;
 
     public void Update()
