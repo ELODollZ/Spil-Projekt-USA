@@ -24,22 +24,22 @@ public class SimpleMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            move.y += speed;
+            move.y += 1;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            move.y -= speed;
+            move.y -= 1;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            move.x -= speed;
+            move.x -= 1;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            move.x += speed;
+            move.x += 1;
         }
 
-        rb2d.velocity = move;
+        rb2d.velocity = move.normalized * speed;
 
     }
 }

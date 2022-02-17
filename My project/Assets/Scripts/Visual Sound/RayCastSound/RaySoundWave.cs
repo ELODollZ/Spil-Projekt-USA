@@ -47,6 +47,7 @@ namespace SoundWaveSystem
                 IHitObj[] hits = new IHitObj[10];
                 Vector2[] hitPoints = new Vector2[10];
                 SubRay(transform.position, new Vector2(Mathf.Cos(angelPerStep * i * Mathf.Deg2Rad), Mathf.Sin(angelPerStep * i * Mathf.Deg2Rad)), dis, angelPerStep * i, hits, 0, Vector2.zero);
+                EndRay(hits);
             }
         }
 
@@ -55,7 +56,10 @@ namespace SoundWaveSystem
         public void SubRay(Vector2 origin, Vector2 dir, float disLeft, float angle, IHitObj[] hits, int hitCount, Vector2 originNormal)
         {
 
-            if (hitCount == 10) return;
+            if (hitCount == 10)
+            {
+                return;
+            }
 
             RaycastHit2D rayHit = Physics2D.Raycast(origin + (originNormal*0.1f), dir, disLeft, hitCount==0? hitLayerFirstRay : hitLayer);
 
@@ -65,7 +69,10 @@ namespace SoundWaveSystem
                 IHitObj justHit = rayHit.collider.gameObject.GetComponent<IHitObj>();
 
                 //vis det der blev ramt ikke var et hit obj
-                if (justHit == null) return;
+                if (justHit == null)
+                {
+                    return;
+                }
 
                 hits[hitCount] = justHit;
                 //siger til det ramte obj at det var ramt
@@ -83,7 +90,11 @@ namespace SoundWaveSystem
                 //skyder en ny ray
                 SubRay(rayHit.point, new Vector2(Mathf.Cos(reflectAngle * Mathf.Deg2Rad), Mathf.Sin(reflectAngle * Mathf.Deg2Rad)), disLeft-rayHit.distance- justHit.Dampening, reflectAngle, hits, hitCount+1, rayHit.normal);
             }
+        }
 
+        //oprydning efter rays
+        private void EndRay(IHitObj[] hits)
+        {
             for (int i = 0; i < hits.Length; i++)
             {
                 if (hits[i] == null) return;

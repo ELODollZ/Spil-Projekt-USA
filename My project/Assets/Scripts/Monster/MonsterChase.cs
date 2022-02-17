@@ -7,6 +7,7 @@ using UnityEngine;
 
 // ændringer af rasmus
 // Skiftede scriptet væk fra monobehavier til AIState så det kunne inkoboreres i Moster State systemet
+// ændrede så monsteret bruger en riget body til bevægelse for ikke at kunne gå igennem væge
 
 public class MonsterChase : AIState
 {
@@ -26,35 +27,21 @@ public class MonsterChase : AIState
     #region Rasmus Tilføjede af variabler
     [SerializeField] float intrestTime = 3;
 
+    [SerializeField] Transform monster;
+
+    [SerializeField] Rigidbody2D rb2d;
+
     float timeToStopIntrest;
 
     [SerializeField] AIState stateafterLoseIntrest;
 
-    //afstater den tideliger Player transmorm variabel
-    Vector2 chasePoint;
+    //afstater den tideliger Player transmorm variabel og er punktet som monstert følger efter
+    [SerializeField] Vector2 chasePoint;
     #endregion
 
-    // Gør så man kan vælge de particles som vi vil bruge på monsteret
-    [SerializeField] ParticleSystem m_ParticleSystem;
-
-    public override AIState HandleSoundHit(ISoundOrigin origin, IHitObj[] hits, float disLeft)
+    public override AIState HandleSoundHit(ISoundOrigin origin, Vector2 soundPoint, float disLeft)
     {
-        //finder starts positionen af den lyd reflektion eller lydkilde som mosteret hørte
-        if (hits[0] == null) chasePoint = origin.SoundPos;
-        else
-        {
-            for (int i = 2; i < hits.Length; i++)
-            {
-                if (hits[i] == null)
-                {
-                    chasePoint = hits[i - 1].HitPos;
-                }
-                else
-                {
-                    chasePoint = hits[i].HitPos;
-                }
-            }
-        }
+        chasePoint = soundPoint;
 
         timeToStopIntrest = intrestTime;
 
@@ -66,13 +53,13 @@ public class MonsterChase : AIState
     {
         #region Tobiases del fra update funktion
         // sets the range between the monster and the player
-        range = Vector2.Distance(transform.position, chasePoint);
+        range = Vector2.Distance(monster.transform.position, chasePoint);
 
         // Siger at hvis spilleren er inden for max distance mellem spiller og monster
         if (range < maxDis)
         {
             // Så begynder monsteret at bevæger sig mod spilleren
-            transform.position = Vector2.MoveTowards(transform.position, chasePoint, Speed * Time.deltaTime);
+            rb2d.velocity = (chasePoint-(Vector2)monster.transform.position).normalized * Speed;
         }
         #endregion
         //hvis der er gået længe siden nogen lyd skete skift 

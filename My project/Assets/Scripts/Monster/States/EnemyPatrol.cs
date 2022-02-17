@@ -5,7 +5,7 @@ using SoundWaveSystem;
 
 public class EnemyPatrol : AIState
 {
-    public override AIState HandleSoundHit(ISoundOrigin origin, IHitObj[] hits, float disLeft)
+    public override AIState HandleSoundHit(ISoundOrigin origin, Vector2 hits, float disLeft)
     {
         return this;
     }

@@ -11,10 +11,12 @@ public class EnemyStandStil : AIState
 
     [SerializeField] AIState stateWhenHearSound;
 
-    public override AIState HandleSoundHit(ISoundOrigin origin, IHitObj[] hits, float disLeft)
+    public override AIState HandleSoundHit(ISoundOrigin origin, Vector2 soundPoint, float disLeft)
     {
         if (disLeft > heringMin)
         {
+            Debug.Log("heard something");
+            stateWhenHearSound.HandleSoundHit(origin, soundPoint, disLeft);
             return stateWhenHearSound;
         }
 
