@@ -8,9 +8,11 @@ public class Loader1 : MonoBehaviour
 {
     // Det her script er sat på en trigger i floor 1, hvor når man går ind i den, kører den det her script 
 
+    [SerializeField] int sceneToLoad;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         // skifter til scene 2 som er sat til at være floor 2 når man går ind i triggeren
-        SceneManager.LoadScene(2);   
+        SceneManager.LoadScene(sceneToLoad);   
     }
 }
