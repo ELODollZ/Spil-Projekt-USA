@@ -10,7 +10,7 @@ public class PlayAudioWhenPing : MonoBehaviour
     AudioSource audioSource;
 
     [SerializeField]
-    AudioClip[] sounds;
+    AudioClip[] sounds = new AudioClip[1];
 
     [SerializeField]
     SoundPlayMode soundPlayMode = SoundPlayMode.none;

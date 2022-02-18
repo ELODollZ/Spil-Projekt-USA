@@ -805,14 +805,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273886684296396618}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c22c2b4a9b8348345a8d1485b74aea4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rock: {fileID: 8373802765307080442, guid: f3edb1c5bf266be489836148f7be7a3b, type: 3}
   firePoint: {fileID: 3805690197797437773}
-  throwingSpeed: 3
+  throwingSpeed: 5
 --- !u!1 &1273886684329995147
 GameObject:
   m_ObjectHideFlags: 0

@@ -72020,14 +72020,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 241208882, guid: 040f4a9bafbd98b4cb32dc11b2953e7a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 241208882, guid: 040f4a9bafbd98b4cb32dc11b2953e7a, type: 3}
-      propertyPath: throwingSpeed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1273886684329995146, guid: 040f4a9bafbd98b4cb32dc11b2953e7a, type: 3}
       propertyPath: m_RootOrder
       value: 1
