@@ -545,6 +545,7 @@ GameObject:
   - component: {fileID: 1273886684296396592}
   - component: {fileID: 4519354076285908601}
   - component: {fileID: 241208882}
+  - component: {fileID: 2796085443892120402}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -813,6 +814,18 @@ MonoBehaviour:
   rock: {fileID: 8373802765307080442, guid: f3edb1c5bf266be489836148f7be7a3b, type: 3}
   firePoint: {fileID: 3805690197797437773}
   throwingSpeed: 5
+--- !u!114 &2796085443892120402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273886684296396618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768e8dfd86df3a048bfa94c9b7ac332a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1273886684329995147
 GameObject:
   m_ObjectHideFlags: 0
