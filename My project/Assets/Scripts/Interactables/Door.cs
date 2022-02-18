@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SoundWaveSystem;
 using Misc.Events;
+using UnityEngine.Events;
 
 // af rasmus
 // styring af door
@@ -29,6 +30,9 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
     FloatEvent onOriginPing1, onOriginPing2;
 
     [SerializeField]
+    UnityEvent onLockedDoor;
+
+    [SerializeField]
     bool locked = false;
 
     int eventToTriger = 0;
@@ -51,7 +55,11 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
     public void Interact()
     {
         //gør ikke noget hvis døren er låst
-        if (locked) return;
+        if (locked)
+        {
+            onLockedDoor?.Invoke();
+            return;
+        }
 
         // får døren til at åbne
         if (doorDesierdState > 0.5f || doorDesierdState < 0.5f)

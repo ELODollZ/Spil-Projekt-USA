@@ -21,6 +21,7 @@ public class PingFadeColor : MonoBehaviour
     void Start()
     {
         spriteRendererOfObj = GetComponent<SpriteRenderer>();
+        spriteRendererOfObj.color = new Color(spriteRendererOfObj.color.r, spriteRendererOfObj.color.g, spriteRendererOfObj.color.b, 0);
     }
 
     // Update is called once per frame

@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 0}
-  soundPlayMode: 2
+  - {fileID: 8300000, guid: 0a2e8e5e28e45ea4d8237e06fcda1b52, type: 3}
+  soundPlayMode: 1
 --- !u!1 &1702718760615840340
 GameObject:
   m_ObjectHideFlags: 0

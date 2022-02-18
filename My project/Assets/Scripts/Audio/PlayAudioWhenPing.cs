@@ -13,7 +13,7 @@ public class PlayAudioWhenPing : MonoBehaviour
     AudioClip[] sounds = new AudioClip[1];
 
     [SerializeField]
-    SoundPlayMode soundPlayMode = SoundPlayMode.none;
+    SoundPlayMode soundPlayMode = SoundPlayMode.playDefult;
 
     int next = 0;
 
@@ -36,7 +36,8 @@ public class PlayAudioWhenPing : MonoBehaviour
                 next++;
                 if (next == sounds.Length) next = 0;
                 break;
-            case SoundPlayMode.none:
+            case SoundPlayMode.playDefult:
+                audioSource.clip = sounds[0];
                 break;
             default:
                 break;
@@ -48,4 +49,4 @@ public class PlayAudioWhenPing : MonoBehaviour
 }
 
 
-public enum SoundPlayMode {random, inOrder,/* bySoundPower,*/ none}
+public enum SoundPlayMode {random, inOrder,/* bySoundPower,*/ playDefult}

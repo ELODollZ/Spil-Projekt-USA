@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 24bb28472e0b6894fb4da17a98efcfca, type: 3}
+  soundPlayMode: 2
 --- !u!82 &7983654342016881053
 AudioSource:
   m_ObjectHideFlags: 0
@@ -279,7 +282,7 @@ MonoBehaviour:
   - {fileID: 0}
   speed: 2
   loop: 0
-  heringMin: 1
+  heringMin: 8
   stateWhenHearSound: {fileID: 7983654342130275198}
 --- !u!1 &7983654342504225570
 GameObject:
@@ -298,6 +301,8 @@ GameObject:
   - component: {fileID: 7983654342504225580}
   - component: {fileID: 7983654342504225581}
   - component: {fileID: 7983654342504225577}
+  - component: {fileID: 1729003451842055068}
+  - component: {fileID: 169468602765379276}
   m_Layer: 8
   m_Name: Monster Brute
   m_TagString: Untagged
@@ -558,6 +563,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &1729003451842055068
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983654342504225570}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bbd93edf74cb9b8438a2f7748daa485c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &169468602765379276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983654342504225570}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e255e0eb0cdfa49b3d25086438e743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &7983654342613745220
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +639,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: ac967339c04fb26499e56910319d2107, type: 3}
+  - {fileID: 8300000, guid: 0e0f1c40aab2b294b82d6dae8ac12524, type: 3}
+  soundPlayMode: 0
 --- !u!82 &7983654342613745218
 AudioSource:
   m_ObjectHideFlags: 0
@@ -853,13 +894,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81e4aa682ec414540916bf2a55fdd1a1, type: 3}
---- !u!4 &1410896367713415832 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9033976306947657028, guid: 81e4aa682ec414540916bf2a55fdd1a1, type: 3}
-  m_PrefabInstance: {fileID: 7983654341869010908}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &1410896367713415833 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 9033976306947657029, guid: 81e4aa682ec414540916bf2a55fdd1a1, type: 3}
+  m_PrefabInstance: {fileID: 7983654341869010908}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1410896367713415832 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9033976306947657028, guid: 81e4aa682ec414540916bf2a55fdd1a1, type: 3}
   m_PrefabInstance: {fileID: 7983654341869010908}
   m_PrefabAsset: {fileID: 0}
