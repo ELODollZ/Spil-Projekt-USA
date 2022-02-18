@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 24bb28472e0b6894fb4da17a98efcfca, type: 3}
+  soundPlayMode: 1
 --- !u!82 &4138653146725430771
 AudioSource:
   m_ObjectHideFlags: 0
@@ -268,6 +271,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  locked: 0
 --- !u!114 &4138653147813403301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,6 +514,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: f6dd70f9967d54748b3362ce93622d28, type: 3}
+  soundPlayMode: 1
 --- !u!82 &4138653148787497551
 AudioSource:
   m_ObjectHideFlags: 0

@@ -140,6 +140,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: ff32f9c2fe22882418a51f9c6e7b7e3e, type: 3}
+  - {fileID: 8300000, guid: 9c8750489c45f2f4488cbe5e8c0e7c3b, type: 3}
+  soundPlayMode: 0
 --- !u!1 &859182599
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +805,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273886684296396618}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c22c2b4a9b8348345a8d1485b74aea4f, type: 3}
   m_Name: 
