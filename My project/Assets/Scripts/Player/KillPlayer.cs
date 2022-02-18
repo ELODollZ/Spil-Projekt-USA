@@ -24,7 +24,7 @@ public class KillPlayer : MonoBehaviour
     //laver en function der tjekker hvad object rammes af, og så om objectet har tag Enemy og hvis den har køre den if statement.
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             //debug er for at se at spilleren er død.
             Debug.Log("The Player has entered Death!");
