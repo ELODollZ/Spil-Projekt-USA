@@ -916,7 +916,12 @@ GameObject:
   - component: {fileID: 7983654342504225577}
   - component: {fileID: 1729003451842055068}
   - component: {fileID: 169468602765379276}
+<<<<<<< Updated upstream
   - component: {fileID: 4333689787341437841}
+=======
+  - component: {fileID: 3084720521921265645}
+  - component: {fileID: 8073677772907531398}
+>>>>>>> Stashed changes
   m_Layer: 8
   m_Name: Monster Brute
   m_TagString: Enemy
@@ -1138,7 +1143,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1729003451842055068}
+<<<<<<< Updated upstream
 --- !u!114 &4333689787341437841
+=======
+--- !u!195 &3084720521921265645
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983654342504225570}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &8073677772907531398
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1147,6 +1178,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7983654342504225570}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 778dc889243b9444e8e7265f91c841e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -1213,6 +1245,11 @@ MonoBehaviour:
   floorLayer:
     serializedVersion: 2
     m_Bits: 0
+=======
+  m_Script: {fileID: 11500000, guid: 01f540cfe26218b4b99349e8a138e823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &7983654342613745220
 GameObject:
   m_ObjectHideFlags: 0
