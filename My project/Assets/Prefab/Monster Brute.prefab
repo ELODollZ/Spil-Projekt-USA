@@ -912,11 +912,7 @@ GameObject:
   - component: {fileID: 1729003451842055068}
   - component: {fileID: 169468602765379276}
   - component: {fileID: 4333689787341437841}
-<<<<<<< Updated upstream
-  - component: {fileID: -5366731657271152452}
-=======
-  - component: {fileID: -1658677137660960412}
->>>>>>> Stashed changes
+  - component: {fileID: 2869470787146904158}
   m_Layer: 8
   m_Name: Monster Brute
   m_TagString: Enemy
@@ -1213,27 +1209,14 @@ MonoBehaviour:
   floorLayer:
     serializedVersion: 2
     m_Bits: 0
-<<<<<<< Updated upstream
---- !u!114 &-5366731657271152452
-MonoBehaviour:
-=======
---- !u!195 &-1658677137660960412
+--- !u!195 &2869470787146904158
 NavMeshAgent:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7983654342504225570}
-<<<<<<< Updated upstream
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7c0dbf244563864ea188e8cf99bf2c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Doors: {fileID: 4138653147813403302, guid: 1c5bc5ca37f43a846b91c505fff15fda, type: 3}
-=======
-  m_Enabled: 0
   m_AgentTypeID: -1372625422
   m_Radius: 0.5
   m_Speed: 3.5
@@ -1248,7 +1231,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
->>>>>>> Stashed changes
 --- !u!1 &7983654342613745220
 GameObject:
   m_ObjectHideFlags: 0
