@@ -6,7 +6,7 @@ using UnityEngine;
 public class KillPlayer : MonoBehaviour
 {
     //kalder variabler som endelige ikke bliver brugte, det var ment til hvis vi også skulle fjerne rigidbody2D og scripts for at undgå errors når spilleren døde
-    GameObject player;
+    public GameObject player;
     GameObject enemy;
     Rigidbody2D rb2d;
     // Start is called before the first frame update
