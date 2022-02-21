@@ -7,9 +7,16 @@ public class NavMeshMoveToPoints : MonoBehaviour
 {
     public Transform Goal;
 
-    void start()
+    NavMeshAgent agent;
+
+    void Start()
     {
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        agent.destination = Goal.position;
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+    }
+    public void UpdateDestination(Vector3 position)
+    {
+        agent.SetDestination(Goal.position);
     }
 }
