@@ -371,6 +371,7 @@ GameObject:
   - component: {fileID: 4138653147813403299}
   - component: {fileID: 4138653147813403300}
   - component: {fileID: 4138653147813403301}
+  - component: {fileID: 427760140215334177}
   m_Layer: 10
   m_Name: Door v3
   m_TagString: Door
@@ -524,6 +525,19 @@ MonoBehaviour:
   hitLayerFirstRay:
     serializedVersion: 2
     m_Bits: 448
+--- !u!114 &427760140215334177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138653147813403302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c0dbf244563864ea188e8cf99bf2c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 4138653147813403302}
 --- !u!1 &4138653148080923680
 GameObject:
   m_ObjectHideFlags: 0
