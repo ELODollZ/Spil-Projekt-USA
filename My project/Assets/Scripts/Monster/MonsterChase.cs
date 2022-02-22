@@ -4,7 +4,8 @@ using SoundWaveSystem;
 using UnityEngine;
 using UnityEngine.AI;
 
-//Af Tobias
+// Af Tobias
+// Få Monster til at gå efter spilleren hvis man laver lyd inden for dens range
 
 // ændringer af rasmus
 // Skiftede scriptet væk fra monobehavier til AIState så det kunne inkoboreres i Moster State systemet

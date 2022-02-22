@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // Af Tobias
+// Sætter knapper på Main menu
 
 public class SC_MainMenu : MonoBehaviour
 {

@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 //Made By Editor: Daniel M�nster Nybo (shooting/throwing scripts)
+// Gør så man har sten at kaste til at distrehere monsteret
+
 // Ændring af Tobias
 // Ændring: Har sat et limit på hvor mange sten man kan kaste og lavet UI text så man kan se hvor mange sten man har
+
 public class Throwing : MonoBehaviour
 {
     //Skaber variabler til at kalde i scripts, og sætter hastighed på speed, 

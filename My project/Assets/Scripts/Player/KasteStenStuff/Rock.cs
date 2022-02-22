@@ -5,6 +5,7 @@ using SoundWaveSystem;
 using Misc.Events;
 
 //Made By Editor: Daniel M�nster Nybo (Rock scripts)
+
 // ændringer af Rasmus
 // Ændringer : gjorde så stenen bruger lydsystemet 
 

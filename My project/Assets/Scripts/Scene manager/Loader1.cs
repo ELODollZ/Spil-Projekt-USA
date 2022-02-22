@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // Af Tobias
+// Scene management script
 public class Loader1 : MonoBehaviour
 {
     // Det her script er sat på en trigger i floor 1, hvor når man går ind i den, kører den det her script 
