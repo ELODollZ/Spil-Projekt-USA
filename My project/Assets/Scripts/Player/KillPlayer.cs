@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Af Daniel Nybo
 public class KillPlayer : MonoBehaviour
@@ -28,7 +29,7 @@ public class KillPlayer : MonoBehaviour
         {
             //debug er for at se at spilleren er død.
             Debug.Log("The Player has entered Death!");
-            Destroy(player);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
     }
