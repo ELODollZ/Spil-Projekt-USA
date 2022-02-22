@@ -144,7 +144,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.009159088
+      value: 0.26153564
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.99847376
+      value: 0.893968
+      inSlope: 0.86184543
+      outSlope: 0.86184543
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.06240526
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

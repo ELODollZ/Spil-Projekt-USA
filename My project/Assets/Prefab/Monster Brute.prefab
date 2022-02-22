@@ -514,8 +514,8 @@ MonoBehaviour:
   OnBonk:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerNewSoundTest, Assembly-CSharp
+      - m_Target: {fileID: 850256736}
+        m_TargetAssemblyTypeName: MMakeSound, Assembly-CSharp
         m_MethodName: MakeSound
         m_Mode: 1
         m_Arguments:

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Actuel Game/Turtorial.unity
     guid: 02f6aa6d5f6fd854bbf0379ba7d0cc15
   - enabled: 1
+    path: Assets/Scenes/Actuel Game/Tutorial 2.unity
+    guid: 5655d476cac68a444b892385b9e0b600
+  - enabled: 1
     path: Assets/Scenes/Actuel Game/Floor 1.unity
     guid: 2b5102ea60c26c94fbb4113a0daeae8d
   - enabled: 1

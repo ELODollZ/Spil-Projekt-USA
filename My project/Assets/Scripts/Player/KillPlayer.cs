@@ -2,14 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 //Af Daniel Nybo
+
+    // edits af rasmus
+
 public class KillPlayer : MonoBehaviour
 {
     //kalder variabler som endelige ikke bliver brugte, det var ment til hvis vi også skulle fjerne rigidbody2D og scripts for at undgå errors når spilleren døde
     public GameObject player;
     GameObject enemy;
     Rigidbody2D rb2d;
+
+    [SerializeField]
+    UnityEvent playBonk;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +38,11 @@ public class KillPlayer : MonoBehaviour
             Debug.Log("The Player has entered Death!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-
+        // -Rasmus- tilføjede så spilleren laver lyd når går ind i en væg
+        else
+        {
+            Debug.Log("BONK!");
+            playBonk?.Invoke();
+        }
     }
 }
