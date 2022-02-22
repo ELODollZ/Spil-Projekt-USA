@@ -53,6 +53,7 @@ public class PingedTimedDisapering : MonoBehaviour, IPoolerble
 
     public void RestartTimer()
     {
+        gameObject.SetActive(true);
         timer.Restart();
     }
 }
