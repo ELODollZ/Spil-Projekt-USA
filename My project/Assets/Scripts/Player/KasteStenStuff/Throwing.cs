@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 //Made By Editor: Daniel M�nster Nybo (shooting/throwing scripts)
 // Ændring af Tobias
-// Ændring: Har sat et limit på hvor mange sten man kan kaste
+// Ændring: Har sat et limit på hvor mange sten man kan kaste og lavet UI text så man kan se hvor mange sten man har
 public class Throwing : MonoBehaviour
 {
     //Skaber variabler til at kalde i scripts, og sætter hastighed på speed, 
@@ -15,24 +15,29 @@ public class Throwing : MonoBehaviour
     Vector2 lookDirection;
     float lookAngle;
 
+    // Sætter hvor mange sten man har, hvor mange man max kan have og hvor mange man mindst kan have
     [SerializeField] private int CurrentRock;
     [SerializeField] private int MaxRock = 4;
     private int MinRock = 0;
 
+    // Bruges til at sætte text op i UI
     public Text rockDisplay;
 
     void Start()
     {
+        // Sætter spillerens mængde af sten til 1 i starten af spillet
         CurrentRock = 1;  
     }
     void Update()
     {
+        // Sætter UI texten til at vise hvor mange sten spilleren har
         rockDisplay.text = CurrentRock.ToString();
 
         //Ved Space køres funktion af at kalde et objectclone Rock og sætter den ved firepoint.right og så en debug til udskrive i consolen at den faktisk kan tjekke om der bliver trykket på Space
         //Kalder også Rigidbody og sætter en veolcity på Rock clonerne som indsætters ved firePoint.
         if (Input.GetMouseButtonDown(0))
         {
+            // Gør så spilleren kun kan kaste sten hvis man har sten
             if (CurrentRock > MinRock)
             {
                 //Sætter variablen lookDirection til main Camera og bruger Math til at udregne position til LookDirection og omregner fra radians til degres
@@ -49,13 +54,13 @@ public class Throwing : MonoBehaviour
 
                 CurrentRock --;
             }
-            else
+            /*else
             {
-                Debug.Log("Out of ammo");
-            }
+                Debug.Log("Out of Rocks");
+            }*/
         }
     }
-
+  
     /*
     //variable og prefab
     public Transform KasteStartingsPladsForRock;
