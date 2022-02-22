@@ -147,6 +147,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.00000037206337
+      value: 0.19668496
+      inSlope: 0.66171074
+      outSlope: 0.66171074
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.13687253
+    - serializedVersion: 3
+      time: 0.51141256
+      value: 0.5591421
+      inSlope: 0.036194485
+      outSlope: 0.036194485
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14657666
+    - serializedVersion: 3
+      time: 0.99999964
+      value: 0.7196045
+      inSlope: 0.20957027
+      outSlope: 0.20957027
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15287247
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   sounds:
   - {fileID: 8300000, guid: ff32f9c2fe22882418a51f9c6e7b7e3e, type: 3}
   - {fileID: 8300000, guid: 9c8750489c45f2f4488cbe5e8c0e7c3b, type: 3}
@@ -163,6 +196,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.00000037206337
+      value: 0.19668496
+      inSlope: 0.66171074
+      outSlope: 0.66171074
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.13687253
+    - serializedVersion: 3
+      time: 0.51141256
+      value: 0.5591421
+      inSlope: 0.036194485
+      outSlope: 0.036194485
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14657666
+    - serializedVersion: 3
+      time: 0.99694824
+      value: 0.9845144
+      inSlope: 0.20957027
+      outSlope: 0.20957027
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15287247
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   sounds:
   - {fileID: 8300000, guid: b1c1b93f4a70a034eaa86d5db71b3ebf, type: 3}
   - {fileID: 8300000, guid: 0a2735ad8bea8014aa3ba837627373c8, type: 3}
@@ -182,6 +248,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0030521299
+      value: 0.39752114
+      inSlope: 0.75211185
+      outSlope: 0.75211185
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.05799684
+    - serializedVersion: 3
+      time: 0.9969479
+      value: 0.60131836
+      inSlope: 0.09459267
+      outSlope: 0.09459267
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07814485
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   sounds:
   - {fileID: 8300000, guid: 9581e12f85848334397341254f465d65, type: 3}
   - {fileID: 8300000, guid: 26482c1a8ea636649aacecb5d4d3e5db, type: 3}
@@ -198,6 +288,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.00000037206337
+      value: 0.19668496
+      inSlope: 0.66171074
+      outSlope: 0.66171074
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.13687253
+    - serializedVersion: 3
+      time: 0.51141256
+      value: 0.5591421
+      inSlope: 0.036194485
+      outSlope: 0.036194485
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14657666
+    - serializedVersion: 3
+      time: 0.99999964
+      value: 0.7196045
+      inSlope: 0.20957027
+      outSlope: 0.20957027
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15287247
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   sounds:
   - {fileID: 0}
   - {fileID: 0}
@@ -899,7 +1022,7 @@ GameObject:
   - component: {fileID: 922688073906365103}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1120,7 +1243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768e8dfd86df3a048bfa94c9b7ac332a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1273886684296396618}
 --- !u!114 &922688073906365103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1512,7 +1635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6afad003dbc10a644b94fd6f0eced808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundDis: 30
+  soundDis: 34
   pingEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1751,7 +1874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6afad003dbc10a644b94fd6f0eced808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundDis: 10
+  soundDis: 6
   pingEvent:
     m_PersistentCalls:
       m_Calls:

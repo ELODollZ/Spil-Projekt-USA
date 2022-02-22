@@ -45,6 +45,9 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
     public Vector2 SoundPos
     { get { return (Vector2)transform.position; }}
 
+    [SerializeField]
+    GameObject desParticle;
+
     private void Start()
     {
         doorDesierdState = doorOpenState;
@@ -135,5 +138,11 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
     public void Unlock()
     {
         locked = false;
+    }
+
+    //til ødelægning af dør
+    public void Destroy(Vector2 destroierPos)
+    {
+        Destroy(gameObject);
     }
 }

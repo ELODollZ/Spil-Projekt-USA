@@ -142,8 +142,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0015262514
+      value: 0.3440086
+      inSlope: 0.10025529
+      outSlope: 0.10025529
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.05621392
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   sounds:
-  - {fileID: 8300000, guid: f6dd70f9967d54748b3362ce93622d28, type: 3}
+  - {fileID: 8300000, guid: a41be75c2cedeb44a8a52eceb0dc3580, type: 3}
   soundPlayMode: 2
 --- !u!114 &711221746636843401
 MonoBehaviour:
@@ -216,7 +240,7 @@ MonoBehaviour:
     m_Bits: 1472
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 1472
+    m_Bits: 448
 --- !u!1 &7052758933657432044
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,9 +293,9 @@ MonoBehaviour:
   Pressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Door, Assembly-CSharp
-        m_MethodName: Unlock
+      - m_Target: {fileID: 711221746636843401}
+        m_TargetAssemblyTypeName: MMakeSound, Assembly-CSharp
+        m_MethodName: MakeSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

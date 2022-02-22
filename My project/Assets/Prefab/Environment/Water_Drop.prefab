@@ -140,6 +140,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0031505679
+      value: 0.3471061
+      inSlope: 0.044279583
+      outSlope: 0.044279583
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.24261686
+    - serializedVersion: 3
+      time: 1.0015255
+      value: 0.64294624
+      inSlope: 0.05301753
+      outSlope: 0.05301753
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.079989545
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   sounds:
   - {fileID: 8300000, guid: 0a2e8e5e28e45ea4d8237e06fcda1b52, type: 3}
   soundPlayMode: 1
