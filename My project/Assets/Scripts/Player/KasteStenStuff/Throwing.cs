@@ -16,7 +16,7 @@ public class Throwing : MonoBehaviour
     float lookAngle;
 
     // Sætter hvor mange sten man har, hvor mange man max kan have og hvor mange man mindst kan have
-    [SerializeField] private int CurrentRock;
+    [SerializeField] public int CurrentRock;
     [SerializeField] private int MaxRock = 4;
     private int MinRock = 0;
 
