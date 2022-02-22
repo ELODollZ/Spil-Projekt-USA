@@ -1,30 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// af Daniel Nybo (ødelægge dør når enemy rammer den.
+    // AF Rasmus
+
 public class DestroyingDoors : MonoBehaviour
 {
     [SerializeField]
-    public GameObject door;
+    Door door;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            door.Destroy(transform.position);
         }
     }
 }

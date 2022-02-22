@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// af Rasmus
+
 public class FloorType : MonoBehaviour
 {
     private void Awake()

@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class PlayAudioWhenPing : MonoBehaviour
 {
+    [SerializeField]
+    AnimationCurve soundCurve;
+
     AudioSource audioSource;
 
     [SerializeField]
@@ -43,7 +46,7 @@ public class PlayAudioWhenPing : MonoBehaviour
                 break;
         }
 
-        audioSource.volume = power;
+        audioSource.volume = soundCurve.Evaluate(power);
         audioSource.Play();
     }
 }

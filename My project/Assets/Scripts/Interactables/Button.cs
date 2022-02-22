@@ -15,7 +15,6 @@ public class Button : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log("kanp!");
         Pressed?.Invoke();
     }
 }

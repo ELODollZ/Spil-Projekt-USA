@@ -142,6 +142,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   sounds:
   - {fileID: 8300000, guid: d74d136d5787c154b837c5db98eceb00, type: 3}
   soundPlayMode: 2
@@ -261,6 +267,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.00000037206337
+      value: 0.19668496
+      inSlope: 0.66171074
+      outSlope: 0.66171074
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.13687253
+    - serializedVersion: 3
+      time: 0.51141256
+      value: 0.5591421
+      inSlope: 0.036194485
+      outSlope: 0.036194485
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14657666
+    - serializedVersion: 3
+      time: 0.99999964
+      value: 0.7196045
+      inSlope: 0.20957027
+      outSlope: 0.20957027
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15287247
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   sounds:
   - {fileID: 8300000, guid: 24bb28472e0b6894fb4da17a98efcfca, type: 3}
   soundPlayMode: 1
@@ -371,7 +410,6 @@ GameObject:
   - component: {fileID: 4138653147813403299}
   - component: {fileID: 4138653147813403300}
   - component: {fileID: 4138653147813403301}
-  - component: {fileID: 427760140215334177}
   m_Layer: 10
   m_Name: Door v3
   m_TagString: Door
@@ -505,6 +543,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   locked: 0
+  desParticle: {fileID: 0}
 --- !u!114 &4138653147813403301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,19 +564,6 @@ MonoBehaviour:
   hitLayerFirstRay:
     serializedVersion: 2
     m_Bits: 448
---- !u!114 &427760140215334177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4138653147813403302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7c0dbf244563864ea188e8cf99bf2c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door: {fileID: 4138653147813403302}
 --- !u!1 &4138653148080923680
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +578,7 @@ GameObject:
   - component: {fileID: 4138653148080923705}
   - component: {fileID: 4138653148080923704}
   - component: {fileID: 1121182058}
+  - component: {fileID: 2703870744216089700}
   m_Layer: 10
   m_Name: Door v2
   m_TagString: Untagged
@@ -717,6 +744,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 0.25}
   m_EdgeRadius: 0
+--- !u!114 &2703870744216089700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138653148080923680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c0dbf244563864ea188e8cf99bf2c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 4138653147813403300}
 --- !u!1 &4138653148787497521
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +801,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9d9fb54c1f2b343a489c1166f263d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.00000037206337
+      value: 0.19668496
+      inSlope: 0.66171074
+      outSlope: 0.66171074
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.13687253
+    - serializedVersion: 3
+      time: 0.51141256
+      value: 0.5591421
+      inSlope: 0.036194485
+      outSlope: 0.036194485
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14657666
+    - serializedVersion: 3
+      time: 0.99999964
+      value: 0.7196045
+      inSlope: 0.20957027
+      outSlope: 0.20957027
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15287247
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   sounds:
   - {fileID: 8300000, guid: f6dd70f9967d54748b3362ce93622d28, type: 3}
   soundPlayMode: 1
