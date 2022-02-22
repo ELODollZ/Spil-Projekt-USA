@@ -912,7 +912,10 @@ GameObject:
   - component: {fileID: 1729003451842055068}
   - component: {fileID: 169468602765379276}
   - component: {fileID: 4333689787341437841}
+<<<<<<< Updated upstream
   - component: {fileID: 2869470787146904158}
+=======
+>>>>>>> Stashed changes
   m_Layer: 8
   m_Name: Monster Brute
   m_TagString: Enemy
@@ -1209,6 +1212,7 @@ MonoBehaviour:
   floorLayer:
     serializedVersion: 2
     m_Bits: 0
+<<<<<<< Updated upstream
 --- !u!195 &2869470787146904158
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1231,6 +1235,8 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+=======
+>>>>>>> Stashed changes
 --- !u!1 &7983654342613745220
 GameObject:
   m_ObjectHideFlags: 0
