@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Walls
   - Door
+  - Stone
   layers:
   - Default
   - TransparentFX
