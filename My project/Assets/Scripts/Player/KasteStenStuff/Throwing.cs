@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 //Made By Editor: Daniel M�nster Nybo (shooting/throwing scripts)
 // Ændring af Tobias
 // Ændring: Har sat et limit på hvor mange sten man kan kaste
@@ -18,12 +19,16 @@ public class Throwing : MonoBehaviour
     [SerializeField] private int MaxRock = 4;
     private int MinRock = 0;
 
+    public Text rockDisplay;
+
     void Start()
     {
         CurrentRock = 1;  
     }
     void Update()
     {
+        rockDisplay.text = CurrentRock.ToString();
+
         //Ved Space køres funktion af at kalde et objectclone Rock og sætter den ved firepoint.right og så en debug til udskrive i consolen at den faktisk kan tjekke om der bliver trykket på Space
         //Kalder også Rigidbody og sætter en veolcity på Rock clonerne som indsætters ved firePoint.
         if (Input.GetMouseButtonDown(0))
