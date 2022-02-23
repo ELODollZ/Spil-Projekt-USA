@@ -8,7 +8,6 @@ public class StonePickup : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("hit");
         // Hvis det er en ting med tagget "Player" så bliver den samlet op
         if (collision.gameObject.CompareTag( "Player"))
         {
