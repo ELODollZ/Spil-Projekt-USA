@@ -47,7 +47,7 @@ public class SoundXTimes : MonoBehaviour
             }
         }
          else
-        {
+        { 
             timer.Restart(soundWhen[nextWait]);
         }
 
@@ -56,6 +56,7 @@ public class SoundXTimes : MonoBehaviour
     public void ResetSound()
     {
         timer = new Timer(soundWhen[0]);
+        timer.timerDone += EndOFTimer;
         nextWait = 0;
         enabled = true;
     }
