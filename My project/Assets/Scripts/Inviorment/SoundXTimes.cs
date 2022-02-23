@@ -27,7 +27,7 @@ public class SoundXTimes : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         timer.Tick(Time.deltaTime);
     }
 

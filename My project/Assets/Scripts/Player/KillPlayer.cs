@@ -15,8 +15,15 @@ public class KillPlayer : MonoBehaviour
     GameObject enemy;
     Rigidbody2D rb2d;
 
+    #region - Rasmus -
     [SerializeField]
     UnityEvent playBonk;
+
+    [SerializeField]
+    DeathOverlay deathOverlay;
+
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +43,24 @@ public class KillPlayer : MonoBehaviour
         {
             //debug er for at se at spilleren er død.
             Debug.Log("The Player has entered Death!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //- Rasmus -
+            StartCoroutine(PlayerDead());
         }
         // -Rasmus- tilføjede så spilleren laver lyd når går ind i en væg
         else
         {
             playBonk?.Invoke();
         }
+    }
+
+    //- Rasmus -
+    //Venter et sekundt før scene skift
+    IEnumerator PlayerDead()
+    {
+        deathOverlay.StartFadeOfColor(1);
+
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
