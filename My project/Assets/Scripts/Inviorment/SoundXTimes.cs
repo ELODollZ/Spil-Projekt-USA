@@ -16,6 +16,7 @@ public class SoundXTimes : MonoBehaviour
 
     Timer timer;
 
+    [SerializeField]
     bool loop = false;
 
     void Start()
