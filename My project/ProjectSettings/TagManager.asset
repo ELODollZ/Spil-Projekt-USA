@@ -46,6 +46,9 @@ TagManager:
   - name: Floor
     uniqueID: 2556341175
     locked: 0
+  - name: PickUpObjs
+    uniqueID: 2647132749
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
