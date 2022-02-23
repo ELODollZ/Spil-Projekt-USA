@@ -269,7 +269,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   sounds:
-  - {fileID: 8300000, guid: 0a2e8e5e28e45ea4d8237e06fcda1b52, type: 3}
+  - {fileID: 8300000, guid: 2d1b779611484bb4caa213e8de14ee44, type: 3}
+  - {fileID: 8300000, guid: d9e53d4e295ad104681692dd180f32c4, type: 3}
+  - {fileID: 8300000, guid: 680a7a698e17bf34c9567ac07208d6a3, type: 3}
+  - {fileID: 8300000, guid: b05c287f97f533a47844aa31d8e2570d, type: 3}
   soundPlayMode: 1
 --- !u!1 &1674142227776329938
 GameObject:
@@ -443,9 +446,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundWhen:
-  - 1
-  - 1
-  - 1
+  - 2.5
+  - 2.5
+  - 2.5
+  - 2.5
   sound:
     m_PersistentCalls:
       m_Calls:
