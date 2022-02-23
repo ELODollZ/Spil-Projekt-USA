@@ -10,6 +10,9 @@ public class SimpleMovement : MonoBehaviour
     [SerializeField]
     float speed;
 
+    [SerializeField]
+    float sneakSpeed;
+
     Rigidbody2D rb2d;
 
     void Start()
