@@ -75,6 +75,7 @@ public class Rock : MonoBehaviour, ISoundOrigin
         }
     }
 
+    //funktionen kalder et prefab  som er sat ind i unity editoren og sætter position som er den samme som sten døde på.
     public void respawnRockEfterhit()
     {
         Instantiate(rockPrefab, transform.position, Quaternion.identity);
