@@ -16,6 +16,8 @@ public class SoundXTimes : MonoBehaviour
 
     Timer timer;
 
+    bool loop = false;
+
     void Start()
     {
         timer = new Timer(soundWhen[0]);
@@ -34,13 +36,27 @@ public class SoundXTimes : MonoBehaviour
         nextWait++;
         if (nextWait == soundWhen.Length)
         {
-            enabled = false;
+            if (loop)
+            {
+                ResetSound();
+            }
+            else
+            {
+                enabled = false;
+            }
         }
          else
         {
             timer.Restart(soundWhen[nextWait]);
         }
 
+    }
+
+    public void ResetSound()
+    {
+        timer = new Timer(soundWhen[0]);
+        nextWait = 0;
+        enabled = true;
     }
 
 }
