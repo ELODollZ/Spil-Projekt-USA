@@ -27,11 +27,6 @@ public class Throwing : MonoBehaviour
     // Bruges til at sætte text op i UI
     public Text rockDisplay;
 
-    void Start()
-    {
-        // Sætter spillerens mængde af sten til 1 i starten af spillet
-        CurrentRock = 1;  
-    }
     void Update()
     {
         // Sætter UI texten til at vise hvor mange sten spilleren har

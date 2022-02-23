@@ -58,8 +58,10 @@ public class KillPlayer : MonoBehaviour
     //Venter et sekundt før scene skift
     IEnumerator PlayerDead()
     {
+        Camera.main.transform.parent = null;
+        deathOverlay.transform.parent = null;
+        //fader scermen ud
         deathOverlay.StartFadeOfColor(1);
-
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

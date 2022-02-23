@@ -7,6 +7,9 @@ public class DeathOverlay : MonoBehaviour
     SpriteRenderer spriteRendererOfObj;
 
     [SerializeField]
+    AnimationCurve fadeCurve;
+
+    [SerializeField]
     float fadeTime = 1.5f;
 
     float imageTime;
@@ -28,7 +31,7 @@ public class DeathOverlay : MonoBehaviour
         {
             imageTimeLeft -= Time.deltaTime;
             if (imageTimeLeft < 0) imageTimeLeft = 0;
-            spriteRendererOfObj.color = new Color(spriteRendererOfObj.color.r, spriteRendererOfObj.color.g, spriteRendererOfObj.color.b, 1-(imageTimeLeft / imageTime));
+            spriteRendererOfObj.color = new Color(spriteRendererOfObj.color.r, spriteRendererOfObj.color.g, spriteRendererOfObj.color.b, fadeCurve.Evaluate(imageTimeLeft / imageTime));
         }
     }
 
