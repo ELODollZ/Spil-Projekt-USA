@@ -4,6 +4,8 @@ using UnityEngine;
 using SoundWaveSystem;
 using UnityEngine.Events;
 
+//af Rasmus
+
 public class EnemyAI : MonoBehaviour, IHitObj
 {
     [SerializeField] AIState aIState = null;
@@ -11,6 +13,9 @@ public class EnemyAI : MonoBehaviour, IHitObj
     [SerializeField] float soundDampening = 1;
 
     [SerializeField] UnityEvent HitPing;
+
+    [SerializeField]
+    UnityEvent scream;
 
     public float Dampening { get { return soundDampening; } }
 
@@ -36,6 +41,8 @@ public class EnemyAI : MonoBehaviour, IHitObj
     // Update is called once per frame
     void Update()
     {
+        AIState prevState = aIState;
+
         if (wasHit)
         {
             aIState = aIState.HandleSoundHit(soundOrigin, soundPoint, disLeft);
@@ -44,6 +51,10 @@ public class EnemyAI : MonoBehaviour, IHitObj
         }
 
         aIState = aIState.UpdateState(Time.deltaTime);
+        if (prevState != aIState)
+        {
+            scream?.Invoke();
+        }
     }
 
     //når mosteret høre en lyd

@@ -41,7 +41,6 @@ public class KillPlayer : MonoBehaviour
         // -Rasmus- tilføjede så spilleren laver lyd når går ind i en væg
         else
         {
-            Debug.Log("BONK!");
             playBonk?.Invoke();
         }
     }

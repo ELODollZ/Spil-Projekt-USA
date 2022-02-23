@@ -1031,7 +1031,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   sounds:
   - {fileID: 8300000, guid: 36cd4fc0377939d40a5977980268557b, type: 3}
-  soundPlayMode: 1
+  soundPlayMode: 2
 --- !u!114 &6728628976373315287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,9 +1048,33 @@ MonoBehaviour:
   pingEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6728628976373315287}
-        m_TargetAssemblyTypeName: PlayerNewSoundTest, Assembly-CSharp
-        m_MethodName: Ping
+      - m_Target: {fileID: 7809599799948726996}
+        m_TargetAssemblyTypeName: PlayAudioWhenPing, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1273886684736961001}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 397457811}
+        m_TargetAssemblyTypeName: AfterImage, Assembly-CSharp
+        m_MethodName: CreateAfterImage
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
