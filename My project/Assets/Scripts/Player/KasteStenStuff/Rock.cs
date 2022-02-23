@@ -15,6 +15,8 @@ public class Rock : MonoBehaviour, ISoundOrigin
     private Rigidbody2D rb2d;
     [SerializeField]
     float lifetime = 10f;
+    float positionForRock;
+    public GameObject rockPrefab;
 
     [SerializeField] FloatEvent PingEvent;
 
@@ -26,6 +28,7 @@ public class Rock : MonoBehaviour, ISoundOrigin
 
     bool pinged = false;
     float power = 0;
+
 
     private void Start()
     {
@@ -50,6 +53,7 @@ public class Rock : MonoBehaviour, ISoundOrigin
                 makeSound?.Invoke(soundDis * 0.5f);
                 Destroy(gameObject, 1f);
                 rb2d.velocity = Vector2.zero;
+                respawnRockEfterhit();
             }
         }
     }
@@ -69,5 +73,11 @@ public class Rock : MonoBehaviour, ISoundOrigin
         {
             this.power = power;
         }
+    }
+
+    public void respawnRockEfterhit()
+    {
+        Instantiate(rockPrefab, transform.position, Quaternion.identity);
+      
     }
 }

@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 2
+  rockPrefab: {fileID: 8373802765307080442}
   PingEvent:
     m_PersistentCalls:
       m_Calls:
