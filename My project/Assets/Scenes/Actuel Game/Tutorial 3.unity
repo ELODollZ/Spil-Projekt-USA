@@ -68987,7 +68987,7 @@ GameObject:
   - component: {fileID: 1698256083}
   - component: {fileID: 1698256082}
   - component: {fileID: 1698256084}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Scene Changer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69004,7 +69004,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -69046,7 +69046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 039c41443388f24458d4b6f5f38b75f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 0
+  sceneToLoad: 4
 --- !u!114 &1749846108 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7084374174370968444, guid: 89750e1e056e8e84fa00f12803f256cc, type: 3}
