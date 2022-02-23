@@ -143,6 +143,7 @@ public class Door : MonoBehaviour, IInteractable, ISoundOrigin
     //til ødelægning af dør
     public void Destroy(Vector2 destroierPos)
     {
+        Instantiate(desParticle, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

@@ -561,7 +561,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   locked: 0
-  desParticle: {fileID: 0}
+  desParticle: {fileID: 5814421340607750800, guid: 5d03eca43113e91459e3e308fc982bae, type: 3}
 --- !u!114 &4138653147813403301
 MonoBehaviour:
   m_ObjectHideFlags: 0

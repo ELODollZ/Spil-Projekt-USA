@@ -13,6 +13,9 @@ public class SimpleMovement : MonoBehaviour
     [SerializeField]
     float sneakSpeed;
 
+    [SerializeField]
+    PlayerSoundAfterStep stepPlaye;
+
     Rigidbody2D rb2d;
 
     void Start()
@@ -23,6 +26,21 @@ public class SimpleMovement : MonoBehaviour
 
     void Update()
     {
+        float aSpeed = speed;
+
+        //hvis sneek
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            aSpeed = sneakSpeed;
+            stepPlaye.enabled= false;
+        }
+        else
+        {
+            stepPlaye.enabled = true;
+        }
+
+
+
         Vector2 move = new Vector2(); ;
 
         if (Input.GetKey(KeyCode.W))
@@ -42,7 +60,7 @@ public class SimpleMovement : MonoBehaviour
             move.x += 1;
         }
 
-        rb2d.velocity = move.normalized * speed;
+        rb2d.velocity = move.normalized * aSpeed;
 
     }
 }

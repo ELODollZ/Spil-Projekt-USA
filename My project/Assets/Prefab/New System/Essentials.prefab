@@ -1390,6 +1390,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
+  sneakSpeed: 1
+  stepPlaye: {fileID: 1273886684296396594}
 --- !u!114 &1273886684296396594
 MonoBehaviour:
   m_ObjectHideFlags: 0
