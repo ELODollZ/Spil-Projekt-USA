@@ -9,6 +9,7 @@ TagManager:
   - Walls
   - Door
   - Stone
+  - Button
   layers:
   - Default
   - TransparentFX
