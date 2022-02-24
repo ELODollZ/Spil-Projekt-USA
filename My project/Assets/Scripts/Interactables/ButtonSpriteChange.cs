@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class ButtonSpriteChange : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    Sprite[] sprites;
+
+    int spriteNext = 0;
+
+    SpriteRenderer spriteRenderer;
+
+    private void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeSprite()
     {
-        
+        spriteRenderer.sprite = sprites[spriteNext];
+        spriteNext++;
+        if (spriteNext == sprites.Length)
+        {
+            spriteNext = 0;
+        }
     }
+
 }
