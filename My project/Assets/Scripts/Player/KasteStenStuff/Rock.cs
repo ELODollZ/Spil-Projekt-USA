@@ -8,6 +8,7 @@ using Misc.Events;
 
 // ændringer af Rasmus
 // Ændringer : gjorde så stenen bruger lydsystemet 
+// sten aktivere kanpper nåt de rammer
 
 public class Rock : MonoBehaviour, ISoundOrigin
 {
@@ -15,7 +16,6 @@ public class Rock : MonoBehaviour, ISoundOrigin
     private Rigidbody2D rb2d;
     [SerializeField]
     float lifetime = 10f;
-    float positionForRock;
     public GameObject rockPrefab;
 
     [SerializeField] FloatEvent PingEvent;
@@ -63,6 +63,13 @@ public class Rock : MonoBehaviour, ISoundOrigin
     {
         if (collision == null) return;
 
+        //- Rasmus -
+        //sten aktivere knap
+        if (collision.gameObject.CompareTag("Button"))
+        {
+            collision.gameObject.GetComponent<Button>().Interact();            
+        }
+        // lyd
         makeSound?.Invoke(soundDis);
     }
 

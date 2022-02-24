@@ -46,9 +46,6 @@ public class MonsterChase : AIState
     private void Awake()
     {
         agent = GetComponentInParent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-        agent.enabled = false;
     }
 
     public override AIState HandleSoundHit(ISoundOrigin origin, Vector2 soundPoint, float disLeft)

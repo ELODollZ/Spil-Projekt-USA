@@ -31,9 +31,6 @@ public class EnemyPatrol : AIState
     private void Awake()
     {
         agent = GetComponentInParent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-        agent.enabled = false;
     }
 
     public override AIState HandleSoundHit(ISoundOrigin origin, Vector2 soundPoint, float disLeft)
@@ -53,10 +50,13 @@ public class EnemyPatrol : AIState
     {
         if (reEnabled)
         {
+            Debug.Log("Patrolling");
             agent.enabled = true;
             reEnabled = false;
             agent.SetDestination(folowPoints[nextTaget].position);
         }
+
+        Debug.Log("Still Patrolling");
 
         if (Vector2.Distance(monster.position, folowPoints[nextTaget].position) < disToTaget)
         {
