@@ -50,7 +50,6 @@ public class EnemyPatrol : AIState
     {
         if (reEnabled)
         {
-            Debug.Log("Patrolling");
             agent.enabled = true;
             reEnabled = false;
             agent.SetDestination(folowPoints[nextTaget].position);

@@ -19,22 +19,27 @@ public class PlayerAnimation : MonoBehaviour
         privPos = (Vector2)transform.position;
 
         int dir = 0;
-
-        if (move.x < 0)
+        if (Mathf.Abs(move.x) > Mathf.Abs(move.y))
         {
-            dir = 2;
+            if (move.x < 0)
+            {
+                dir = 2;
+            }
+            if (move.x > 0)
+            {
+                dir = 3;
+            }
         }
-        if (move.x > 0)
+        else
         {
-            dir = 3;
-        }
-        if (move.y < 0)
-        {
-            dir = 1;
-        }
-        if (move.y > 0)
-        {
-            dir = 4;
+            if (move.y < 0)
+            {
+                dir = 1;
+            }
+            if (move.y > 0)
+            {
+                dir = 4;
+            }
         }
         animator.SetInteger("Dirrection", dir);
     }
