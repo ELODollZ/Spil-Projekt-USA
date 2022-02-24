@@ -56,8 +56,6 @@ public class EnemyPatrol : AIState
             agent.SetDestination(folowPoints[nextTaget].position);
         }
 
-        Debug.Log("Still Patrolling");
-
         if (Vector2.Distance(monster.position, folowPoints[nextTaget].position) < disToTaget)
         {
             if (loop)
