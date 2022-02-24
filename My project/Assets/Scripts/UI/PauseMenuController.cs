@@ -5,7 +5,7 @@ using UnityEngine;
 public class PauseMenuController : MonoBehaviour
 {
     [SerializeField]
-    GameObject menu;
+    GameObject menu, inGame;
 
 
     bool pauseState = false;
@@ -13,7 +13,7 @@ public class PauseMenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (pauseState)
             {
@@ -30,6 +30,7 @@ public class PauseMenuController : MonoBehaviour
     public void Pause(bool pause)
     {
         menu.SetActive(pause);
+        inGame.SetActive(!pause);
         pauseState = pause;
         if (pauseState)
         {
