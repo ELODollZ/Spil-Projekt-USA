@@ -14,7 +14,7 @@ public class SimpleMovement : MonoBehaviour
     float sneakSpeed;
 
     [SerializeField]
-    PlayerSoundAfterStep stepPlaye;
+    PlayerSoundAfterStep stepPlaye, sneeakstep;
 
     Rigidbody2D rb2d;
 
@@ -33,10 +33,12 @@ public class SimpleMovement : MonoBehaviour
         {
             aSpeed = sneakSpeed;
             stepPlaye.enabled= false;
+            sneeakstep.enabled = true;
         }
         else
         {
             stepPlaye.enabled = true;
+            sneeakstep.enabled = false;
         }
 
 

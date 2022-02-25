@@ -22,12 +22,26 @@ public class PlayerNewSoundTest : MonoBehaviour, ISoundOrigin
     [SerializeField]
     FloatEvent pingEvent;
 
+    [SerializeField]
+    float playerSound = 1;
+
+    bool madeSound;
+
+    private void Update()
+    {
+        if (madeSound)
+        {
+            //Event at spilleren blev pinget, bliver kaldt med det samme og med den samme styrke fordi spilleren altid høre sine fodspor på et en vis styrke
+            pingEvent?.Invoke(playerSound);
+            madeSound = false;
+        }
+    }
+
     //når denne funktion bliver klade sender spilleren lyd rays
     public void MakeSound()
     {
         makeSound?.Invoke(soundDis);
-        //Event at spilleren blev pinget, bliver kaldt med det samme og med maks styrke fordi spilleren altid høre sine fodspor på fuld styrke
-        pingEvent?.Invoke(1);
+        madeSound = true;
     }
 
 

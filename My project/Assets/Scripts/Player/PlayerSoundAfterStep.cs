@@ -35,4 +35,10 @@ public class PlayerSoundAfterStep : MonoBehaviour
             step?.Invoke();
         }
     }
+
+    private void OnEnable()
+    {
+        disToNextStep = 0.01f;
+        lastPos = transform.position;
+    }
 }
