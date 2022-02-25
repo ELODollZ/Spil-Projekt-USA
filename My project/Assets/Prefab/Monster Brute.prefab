@@ -191,10 +191,10 @@ MonoBehaviour:
   soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
 --- !u!1 &3364899250316186877
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,10 +382,10 @@ MonoBehaviour:
   soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
 --- !u!114 &9062538613683474006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,10 +538,10 @@ MonoBehaviour:
   soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
 --- !u!1 &4378202153500698014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,10 +1181,10 @@ MonoBehaviour:
   soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
 --- !u!114 &850256736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1337,10 +1337,10 @@ MonoBehaviour:
   soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
 --- !u!1 &7401629465162097516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,10 +1441,10 @@ MonoBehaviour:
   soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
 --- !u!1 &8312089817141107866
 GameObject:
   m_ObjectHideFlags: 0
