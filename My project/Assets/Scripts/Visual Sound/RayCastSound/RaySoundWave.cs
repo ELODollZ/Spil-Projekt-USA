@@ -10,8 +10,6 @@ namespace SoundWaveSystem
 {
     public class RaySoundWave : MonoBehaviour
     {
-        [SerializeField] bool debuger;
-
         // hvor mange rays der bliver skudt ud, og der for hvor detaljerede lyd reflektion der laves
         [SerializeField] int soundDetail = 360;
 
@@ -29,8 +27,6 @@ namespace SoundWaveSystem
             soundOrigin.makeSound += ShootRay;
         }
 
-        bool debugray = true;
-
 
         //skyder rays ud for at simulere lyd reflektion
         public void ShootRay(float dis)
@@ -41,14 +37,6 @@ namespace SoundWaveSystem
 
             for (int i = 0; i < soundDetail; i++)
             {
-                if (i == 0 && debuger)
-                {
-                    debugray = true;
-                }
-                 else
-                {
-                    debugray = false;
-                }
 
                 IHitObj[] hits = new IHitObj[10];
                 SubRay(transform.position, new Vector2(Mathf.Cos(angelPerStep * i * Mathf.Deg2Rad), Mathf.Sin(angelPerStep * i * Mathf.Deg2Rad)), dis, angelPerStep * i, hits, 0);
@@ -60,8 +48,6 @@ namespace SoundWaveSystem
         //Ray stuf, til at reflektere lyden
         public void SubRay(Vector2 origin, Vector2 dir, float disLeft, float angle, IHitObj[] hits, int hitCount)
         {
-            if (debugray) Debug.Log(disLeft);
-
             //hvis lydstyrke er forlav stopper den
             if (disLeft <= 0) return;
             // hvis lyden har bouncet 10 gange stopper den
