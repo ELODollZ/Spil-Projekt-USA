@@ -396,7 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1725d9cd926871b498844b63d67f6c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundDis: 5
+  soundDis: 12
   pingEvent:
     m_PersistentCalls:
       m_Calls:
@@ -677,7 +677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9033976306947657029, guid: 81e4aa682ec414540916bf2a55fdd1a1, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9033976306947657029, guid: 81e4aa682ec414540916bf2a55fdd1a1, type: 3}
       propertyPath: InitialModule.startLifetime.scalar

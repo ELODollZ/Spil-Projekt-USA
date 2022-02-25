@@ -62,7 +62,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.38, y: 1}
+  m_Size: {x: 0.63, y: 0.62}
   m_EdgeRadius: 0
 --- !u!212 &1563989024046903628
 SpriteRenderer:
@@ -461,10 +461,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   sounds:
-  - {fileID: 8300000, guid: 2d1b779611484bb4caa213e8de14ee44, type: 3}
-  - {fileID: 8300000, guid: d9e53d4e295ad104681692dd180f32c4, type: 3}
-  - {fileID: 8300000, guid: 680a7a698e17bf34c9567ac07208d6a3, type: 3}
-  - {fileID: 8300000, guid: b05c287f97f533a47844aa31d8e2570d, type: 3}
+  - {fileID: 8300000, guid: fbe3c2aceb344cc459e8369e6953a3c9, type: 3}
   soundPlayMode: 1
 --- !u!1001 &150063595641899618
 PrefabInstance:
@@ -518,8 +515,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9033976306947657029, guid: 81e4aa682ec414540916bf2a55fdd1a1, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033976306947657029, guid: 81e4aa682ec414540916bf2a55fdd1a1, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9033976306947657029, guid: 81e4aa682ec414540916bf2a55fdd1a1, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
@@ -527,7 +528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9033976306947657029, guid: 81e4aa682ec414540916bf2a55fdd1a1, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 1
+      value: 0.3507228
       objectReference: {fileID: 0}
     - target: {fileID: 9033976306947657031, guid: 81e4aa682ec414540916bf2a55fdd1a1, type: 3}
       propertyPath: m_Name
