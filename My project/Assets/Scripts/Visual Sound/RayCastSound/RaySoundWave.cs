@@ -27,12 +27,9 @@ namespace SoundWaveSystem
         {
             soundOrigin = GetComponent<ISoundOrigin>();
             soundOrigin.makeSound += ShootRay;
-
-            if (debuger)
-            {
-                soundOrigin.Ping(1);
-            }
         }
+
+        bool debugray = true;
 
 
         //skyder rays ud for at simulere lyd reflektion
@@ -44,23 +41,34 @@ namespace SoundWaveSystem
 
             for (int i = 0; i < soundDetail; i++)
             {
+                if (i == 0 && debuger)
+                {
+                    debugray = true;
+                }
+                 else
+                {
+                    debugray = false;
+                }
+
                 IHitObj[] hits = new IHitObj[10];
-                SubRay(transform.position, new Vector2(Mathf.Cos(angelPerStep * i * Mathf.Deg2Rad), Mathf.Sin(angelPerStep * i * Mathf.Deg2Rad)), dis, angelPerStep * i, hits, 0, Vector2.zero);
+                SubRay(transform.position, new Vector2(Mathf.Cos(angelPerStep * i * Mathf.Deg2Rad), Mathf.Sin(angelPerStep * i * Mathf.Deg2Rad)), dis, angelPerStep * i, hits, 0);
                 EndRay(hits);
             }
         }
 
 
         //Ray stuf, til at reflektere lyden
-        public void SubRay(Vector2 origin, Vector2 dir, float disLeft, float angle, IHitObj[] hits, int hitCount, Vector2 originNormal)
+        public void SubRay(Vector2 origin, Vector2 dir, float disLeft, float angle, IHitObj[] hits, int hitCount)
         {
+            if (debugray) Debug.Log(disLeft);
 
-            if (hitCount == 10)
-            {
-                return;
-            }
+            //hvis lydstyrke er forlav stopper den
+            if (disLeft <= 0) return;
+            // hvis lyden har bouncet 10 gange stopper den
+            if (hitCount == 10) return;
 
-            RaycastHit2D rayHit = Physics2D.Raycast(origin + (originNormal*0.1f), dir, disLeft, hitCount==0? hitLayerFirstRay : hitLayer);
+
+            RaycastHit2D rayHit = Physics2D.Raycast(origin, dir, disLeft, hitCount==0? hitLayerFirstRay : hitLayer);
 
             if (rayHit)
             {
@@ -68,10 +76,7 @@ namespace SoundWaveSystem
                 IHitObj justHit = rayHit.collider.gameObject.GetComponent<IHitObj>();
 
                 //vis det der blev ramt ikke var et hit obj
-                if (justHit == null)
-                {
-                    return;
-                }
+                if (justHit == null) return;
 
                 hits[hitCount] = justHit;
                 //siger til det ramte obj at det var ramt
@@ -87,7 +92,7 @@ namespace SoundWaveSystem
                 reflectAngle = To360Deg(reflectAngle);
 
                 //skyder en ny ray
-                SubRay(rayHit.point, new Vector2(Mathf.Cos(reflectAngle * Mathf.Deg2Rad), Mathf.Sin(reflectAngle * Mathf.Deg2Rad)), disLeft-rayHit.distance- justHit.Dampening, reflectAngle, hits, hitCount+1, rayHit.normal);
+                SubRay(rayHit.point+ (rayHit.normal*0.01f), new Vector2(Mathf.Cos(reflectAngle * Mathf.Deg2Rad), Mathf.Sin(reflectAngle * Mathf.Deg2Rad)), disLeft-rayHit.distance- justHit.Dampening, reflectAngle, hits, hitCount+1);
             }
         }
 

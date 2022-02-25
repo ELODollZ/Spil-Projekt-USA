@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d166289b1831e8244bdd5dea7bc8087e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dampening: 4
+  dampening: 2
   optimizeDis: 0.25
 --- !u!1001 &693863096
 PrefabInstance:
@@ -57406,6 +57406,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1273886684296396592, guid: 040f4a9bafbd98b4cb32dc11b2953e7a, type: 3}
+      propertyPath: soundDampening
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1273886684329995146, guid: 040f4a9bafbd98b4cb32dc11b2953e7a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -57453,6 +57457,10 @@ PrefabInstance:
     - target: {fileID: 1273886684329995147, guid: 040f4a9bafbd98b4cb32dc11b2953e7a, type: 3}
       propertyPath: m_Name
       value: Essentials
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395757663234837742, guid: 040f4a9bafbd98b4cb32dc11b2953e7a, type: 3}
+      propertyPath: debuger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 040f4a9bafbd98b4cb32dc11b2953e7a, type: 3}
