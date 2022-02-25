@@ -10,17 +10,21 @@ public class Button : MonoBehaviour, IInteractable
 {
     [SerializeField]
     UnityEvent Pressed;
-
+    
+    /*
     [SerializeField]
     bool onTimeUse = true;
 
     bool used = false;
+    */
 
     public Vector2 position { get{ return transform.position; } }
 
     public void Interact()
     {
-        //hvis knappen kun tan trykkes en gang
+        Pressed?.Invoke();
+
+        /*
         if (onTimeUse)
         {
             if (!used)
@@ -32,6 +36,6 @@ public class Button : MonoBehaviour, IInteractable
         else
         {
             Pressed?.Invoke();
-        }
+        }*/
     }
 }

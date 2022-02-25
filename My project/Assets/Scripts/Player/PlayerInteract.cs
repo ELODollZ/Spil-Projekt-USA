@@ -10,17 +10,29 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField]
     float interactDistance = 4f;
 
+    [SerializeField]
+    Transform interactText;
+
+    [SerializeField]
+    Vector2 textOffset;
+
     // Update is called once per frame
     void Update()
     {
         IInteractable interactObj = InteractObj();
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (interactObj != null)
         {
-            if (interactObj != null)
+            interactText.gameObject.SetActive(true);
+            interactText.position = interactObj.position + textOffset;
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 interactObj.Interact();
             }
+        }
+        else
+        {
+            interactText.gameObject.SetActive(false);
         }
     }
 
