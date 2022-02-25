@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5014099816929510410}
   - component: {fileID: 2798961791803422750}
   - component: {fileID: 4281421827579850848}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Locked Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,10 +237,10 @@ MonoBehaviour:
   soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 1472
+    m_Bits: 5568
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 448
+    m_Bits: 1472
 --- !u!1 &4138653146725430773
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 4138653146725430770}
   - component: {fileID: 4138653146725430772}
   - component: {fileID: 4138653146725430771}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Audio 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 4138653147813403299}
   - component: {fileID: 4138653147813403300}
   - component: {fileID: 4138653147813403301}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Door v3
   m_TagString: Door
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 4138653148080923704}
   - component: {fileID: 1121182058}
   - component: {fileID: 2703870744216089700}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Door v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 4138653148787497550}
   - component: {fileID: 4138653148787497520}
   - component: {fileID: 4138653148787497551}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -962,7 +962,7 @@ GameObject:
   - component: {fileID: 4138653147613784419}
   - component: {fileID: 4138653147613784418}
   - component: {fileID: 4005224901686719548}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: N Sound Wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
