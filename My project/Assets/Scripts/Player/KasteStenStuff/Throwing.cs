@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 //Made By Editor: Daniel M�nster Nybo (shooting/throwing scripts)
 // Gør så man har sten at kaste til at distrehere monsteret
 
 // Ændring af Tobias
 // Ændring: Har sat et limit på hvor mange sten man kan kaste og lavet UI text så man kan se hvor mange sten man har
+
+// ændring af Rasmus
+// tilføde event til at lave lyd når spilleren samler en sten op
 
 public class Throwing : MonoBehaviour
 {
@@ -26,6 +30,17 @@ public class Throwing : MonoBehaviour
 
     // Bruges til at sætte text op i UI
     public Text rockDisplay;
+
+    //Event
+    [SerializeField] UnityEvent pickUpEvent;
+
+    // - Rasmus -
+    // Tilføje Sten gennem Funktion
+    public void AddStone ()
+    {
+        CurrentRock++;
+        pickUpEvent?.Invoke();
+    }
 
     void Update()
     {
