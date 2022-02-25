@@ -318,7 +318,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onTimeUse: 1
 --- !u!61 &7052758933657432042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -343,7 +342,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.5}
+  m_Size: {x: 0.2, y: 0.2}
   m_EdgeRadius: 0
 --- !u!212 &7052758933657432045
 SpriteRenderer:
