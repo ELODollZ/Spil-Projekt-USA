@@ -64,6 +64,23 @@ public class PingedTimedDisapering : MonoBehaviour, IPoolerble
         gameObject.SetActive(true);
         timer.Restart();
     }
+    public void RestartTimer(float time)
+    {
+        if (timer == null)
+        {
+            timer = new Timer(time);
+        }
+        else
+        {
+            if (timer.TimeLeft > time)
+            {
+                timer.Restart(timer.TimeLeft);
+            }
+            timer.Restart(time);
+        }
+        gameObject.SetActive(true);
+        timer.Restart();
+    }
 }
 
 public delegate void SimpleCall(PingedTimedDisapering PoolObj);

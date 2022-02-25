@@ -103,6 +103,18 @@ public class WallPing : MonoBehaviour, IHitObj
         obj.disabledEvent -= PingEnded;
         activePoolItems.Remove(obj);
     }
+    
+    //tilføje light point fra andre skripts
+    public void AddLightPoint(Vector2 pos)
+    {
+        toShow.Add(pos);
+        pinged = true;
+    }
+    public void AddLightPoint(Vector2[] pos)
+    {
+        toShow.AddRange(pos);
+        pinged = true;
+    }
 
     //når en ray slutter fjernes alle punkter fra vægesn blev ramt liste så den er klar til den næste ray
     public void EndOfRay()

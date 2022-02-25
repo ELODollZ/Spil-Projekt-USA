@@ -17,18 +17,17 @@ public class KillPlayer : MonoBehaviour
 
     #region - Rasmus -
     [SerializeField]
-    UnityEvent playBonk;
+    UnityEvent playBonk, death;
 
     [SerializeField]
     DeathOverlay deathOverlay;
-
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
         //kalder rigidbodyen så jeg kunne have brugte den senere.
-        GetComponent<Rigidbody2D>();   
+        GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -60,6 +59,7 @@ public class KillPlayer : MonoBehaviour
     {
         Camera.main.transform.parent = null;
         deathOverlay.transform.parent = null;
+        death?.Invoke();
         //fader scermen ud
         deathOverlay.StartFadeOfColor(1);
         yield return new WaitForSeconds(1);
