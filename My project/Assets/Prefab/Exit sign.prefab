@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1725d9cd926871b498844b63d67f6c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundDis: 1
+  soundDis: 3
   pingEvent:
     m_PersistentCalls:
       m_Calls:
