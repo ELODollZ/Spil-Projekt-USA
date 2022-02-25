@@ -360,10 +360,10 @@ MonoBehaviour:
   soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 1472
+    m_Bits: 5568
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 1408
+    m_Bits: 5504
 --- !u!1001 &287565220578692088
 PrefabInstance:
   m_ObjectHideFlags: 0

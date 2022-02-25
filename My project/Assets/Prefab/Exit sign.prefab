@@ -292,10 +292,10 @@ MonoBehaviour:
   soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4288
 --- !u!1 &1563989023713358642
 GameObject:
   m_ObjectHideFlags: 0

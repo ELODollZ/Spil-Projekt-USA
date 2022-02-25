@@ -219,10 +219,10 @@ MonoBehaviour:
   soundDetail: 180
   hitLayer:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
   hitLayerFirstRay:
     serializedVersion: 2
-    m_Bits: 1216
+    m_Bits: 5312
 --- !u!114 &6175657815351001796
 MonoBehaviour:
   m_ObjectHideFlags: 0
